@@ -1,0 +1,58 @@
+{
+    "Navbar": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "work": "Trabajo",
+        "button": "Contacto Directo"
+    },
+    "HeroSection": {
+        "title": "Diseño silencioso Resultados ruidosos",
+        "paragraphA": "Soy desarrollador web y creo que el mejor trabajo habla en silencio pero deja una fuerte impresión.",
+        "paragraphB": "",
+        "button": "Programar una reunión",
+        "welcomeMessage1": "Hola!",
+        "welcomeMessage2": "¡Tu idioma ya está listo!",
+        "welcomeMessage3": "Disfruta de una experiencia de navegación fluida"
+    },
+    "BehindTheScreen": {
+        "title": "Detrás de la pantalla",
+        "paragraphA": "Piensa en mí como tu equipo entre bastidores",
+        "paragraphB": "invisible para la multitud,",
+        "paragraphC": "indispensable para el espectáculo.",
+        "button": "Pase entre bastidores"
+    },
+    "HighlightProject": {
+        "title": "En desarrollo",
+        "currentProject-name": "Blogsy",
+        "currentProject-des": "Blogsy es una plataforma de blogs elegante y fácil de usar, diseñada con las últimas tecnologías web para ofrecer un rendimiento rápido y fluido.",
+        "visitWebsite": "Visitar sitio web",
+        "buttonA": "Ver todo el trabajo",
+        "buttonB": "Detalles del proyecto"
+    },
+    "CTA": {
+        "title": "Construyamos algo increíble juntos",
+        "paragraphA": "Ya sea una colaboración, un puesto a tiempo completo o freelance",
+        "paragraphB": "Me encantaría saber de ti.",
+        "email": "Correo electrónico",
+        "whatsApp": "WhatsApp",
+        "buttonB": "Detalles del proyecto"
+    },
+    "ContactForm": {
+        "title": "Contacto directo",
+        "successMsg": "¡Mensaje enviado con éxito!",
+        "failedMsg": "Error al enviar el mensaje. Inténtalo de nuevo.",
+        "name": "Nombre",
+        "namePlaceholder": "Tu nombre",
+        "email": "Correo electrónico",
+        "emailPlaceholder": "Tu correo electrónico",
+        "message": "Mensaje",
+        "messagePlaceholder": "Tu mensaje aquí, ¡estoy atento!",
+        "send": "Enviando...",
+        "sendMessage": "Enviar mensaje"
+    },
+    "Footer": {
+        "copyRights": "Derechos de autor © 2025 Bishoy Morgan, Todos los derechos reservados",
+        "privacyPolicy": "Política de privacidad",
+        "cookie": "Sitio web sin cookies"
+    }
+}

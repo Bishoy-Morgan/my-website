@@ -1,0 +1,58 @@
+{
+    "Navbar": {
+        "home": "Home",
+        "about": "About",
+        "work": "Work",
+        "button": "Direct Contact"
+    },
+    "HeroSection": {
+        "title": "Quiet design Loud results",
+        "paragraphA": "I'm a web developer who believes the best work speaks softly but leaves a strong impression.",
+        "paragraphB": "I specialize in performance first websites and multilingual experiences, built to be fast, intuitive, and scalable. I don't chase trends. I deliver results that last.",
+        "button": "Book a Free Discovery Call",
+        "welcomeMessage1": "Welcome",
+        "welcomeMessage2": "we've got your language covered!",
+        "welcomeMessage3": "Enjoy a smooth browsing experience."
+    },
+    "BehindTheScreen": {
+        "title": "Behind the screen",
+        "paragraphA": "Think of me as your backstage crew",
+        "paragraphB": "invisible to the crowd, ",
+        "paragraphC": "indispensable to the show.",
+        "button": "Backstage pass"
+    },
+    "HighlightProject": {
+        "title": "In Development",
+        "currentProject-name": "Blogsy",
+        "currentProject-des": "Blogsy is a sleek, user-friendly blogging platform designed with the latest web technologies to deliver fast and seamless performance.",
+        "visitWebsite": "Visit Website",
+        "buttonA": "See All Work",
+        "buttonB": "Check Project Details"
+    },
+    "CTA": {
+        "title": "Let’s Build Something Amazing Together",
+        "paragraphA": "Whether it’s a collaboration, full-time role, or freelance",
+        "paragraphB": "I’d love to hear from you.",
+        "email": "Email",
+        "whatsApp": "WhatsApp",
+        "buttonB": "Check Project Details"
+    },
+    "ContactForm": {
+        "title": "Direct Contact",
+        "successMsg": "Message sent successfully!",
+        "failedMsg": "Failed to send message. Try again.",
+        "name": "Name",
+        "namePlaceholder": "Your name",
+        "email": "Email",
+        "emailPlaceholder": "Your email",
+        "message": "Message",
+        "messagePlaceholder": "Your message goes here, I'm all ears",
+        "send": "Sending...",
+        "sendMessage": "Send Message"
+    },
+    "Footer": {
+        "copyRights": "Copyright © 2025 Bishoy Morgan, All Rights Reserved",
+        "privacyPolicy": "Privacy Policy",
+        "cookie": "Cookie-free Website"
+    }
+}
