@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '@/components/Footer'
 import { motion, Variants } from 'framer-motion'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 const CONTACT_EMAIL = 'bishoy.morgan95@gmail.com'
 
@@ -23,6 +23,7 @@ const itemVariants: Variants = {
 
 export default function PrivacyPolicyPage() {
     const t = useTranslations('PrivacyPolicy')
+    const locale = useLocale()
     const [lastUpdated, setLastUpdated] = useState("")
 
     useEffect(() => {
@@ -62,7 +63,7 @@ export default function PrivacyPolicyPage() {
                     {/* Data collected */}
                     <motion.section className="max-w-4xl" variants={itemVariants}>
                         <h4 className="mb-2">{t("title1")}</h4>
-                        <ul className="list-disc ml-[5%] flex flex-col gap-y-4 text-paleWhite/80">
+                        <ul className={`${locale === 'ar' ? 'mr-[5%]' : 'ml-[5%]'} list-disc flex flex-col gap-y-4 text-paleWhite/80`}>
                             <li>{t('data_contactForm')}</li>
                             <li>{t('data_usage')}</li>
                         </ul>
@@ -71,7 +72,7 @@ export default function PrivacyPolicyPage() {
                     {/* How is your data used */}
                     <motion.section className="max-w-4xl" variants={itemVariants}>
                         <h4 className="mb-2">{t("title2")}</h4>
-                        <p className="text-paleWhite/80 ml-[5%]">
+                        <p className={`${locale === 'ar' ? 'mr-[5%]' : 'ml-[5%]'} text-paleWhite/80`}>
                             {t('use_of_data')}
                         </p>
                     </motion.section>
@@ -79,7 +80,7 @@ export default function PrivacyPolicyPage() {
                     {/* Third-party services */}
                     <motion.section className="max-w-4xl" variants={itemVariants}>
                         <h4 className="mb-2">{t("title3")}</h4>
-                        <p className="text-paleWhite/80 ml-[5%]">
+                        <p className={`${locale === 'ar' ? 'mr-[5%]' : 'ml-[5%]'} text-paleWhite/80`}>
                             {t('third_party')}
                         </p>
                     </motion.section>
@@ -87,7 +88,7 @@ export default function PrivacyPolicyPage() {
                     {/* Cookies */}
                     <motion.section className="max-w-4xl" variants={itemVariants}>
                         <h4 className="mb-2">{t("title4")}</h4>
-                        <p className="text-paleWhite/80 ml-[5%]">
+                        <p className={`${locale === 'ar' ? 'mr-[5%]' : 'ml-[5%]'} text-paleWhite/80`}>
                             {t('cookies')}
                         </p>
                     </motion.section>
@@ -95,29 +96,26 @@ export default function PrivacyPolicyPage() {
                     {/* Your rights */}
                     <motion.section className="max-w-4xl" variants={itemVariants}>
                         <h4 className="mb-2">{t("title5")}</h4>
-                        <ul className="list-disc text-paleWhite/80 ml-[5%]">
+                        <ul className={`${locale === 'ar' ? 'mr-[5%]' : 'ml-[5%]'} list-disc text-paleWhite/80 `}>
                             <li>{t('rights_list.copy')}</li>
                             <li>{t('rights_list.correction')}</li>
                             <li>{t('rights_list.withdraw')}</li>
                         </ul>
-                        <p className="mt-3 text-paleWhite/50 ml-[5%]">
-                            {t.rich('rights_footer', {
-                                email: () => (
-                                    <a
-                                        href={`mailto:${CONTACT_EMAIL}`}
-                                        className="text-white tracking-wide hover:text-red transition-colors"
-                                    >
-                                        {CONTACT_EMAIL}
-                                    </a>
-                                )
-                            })}
+                        <p className="mt-3 text-paleWhite/50 ml-[5%] ">
+                            {t('rights_footer')}{' '}
+                            <a
+                                href={`mailto:${CONTACT_EMAIL}`}
+                                className={`${locale === 'ar' ? 'mr-1' : 'ml-1'} text-red tracking-wide hover:text-red transition-colors`}
+                            >
+                                {CONTACT_EMAIL}
+                            </a>
                         </p>
                     </motion.section>
 
                     {/* Security */}
                     <motion.section className="max-w-4xl" variants={itemVariants}>
                         <h4 className="mb-2">{t("title6")}</h4>
-                        <p className="text-paleWhite/80 ml-[5%]">
+                        <p className={`${locale === 'ar' ? 'mr-[5%]' : 'ml-[5%]'} text-paleWhite/80`}>
                             {t('security')}
                         </p>
                     </motion.section>
@@ -125,7 +123,7 @@ export default function PrivacyPolicyPage() {
                     {/* Children */}
                     <motion.section className="max-w-4xl" variants={itemVariants}>
                         <h4 className="mb-2">{t("title7")}</h4>
-                        <p className="text-paleWhite/80 ml-[5%]">
+                        <p className={`${locale === 'ar' ? 'mr-[5%]' : 'ml-[5%]'} text-paleWhite/80`}>
                             {t('children')}
                         </p>
                     </motion.section>
@@ -133,7 +131,7 @@ export default function PrivacyPolicyPage() {
                     {/* Changes */}
                     <motion.section className="max-w-4xl" variants={itemVariants}>
                         <h4 className="mb-2">{t("title8")}</h4>
-                        <p className="text-paleWhite/80 ml-[5%]">
+                        <p className={`${locale === 'ar' ? 'mr-[5%]' : 'ml-[5%]'} text-paleWhite/80`}>
                             {t('changes')}
                         </p>
                     </motion.section>

@@ -25,7 +25,7 @@ export default function ProjectsPage() {
     }
 
     return (
-        <main className="relative w-full z-10">
+        <main className="relative w-full z-10 !overflow-hidden">
             <HeroProjects project={project} />
             <Footer />
         </main>

@@ -106,6 +106,11 @@
         "paragraphA": "cada uno creado con precisión, creatividad y rendimiento en su núcleo.",
         "preview": "Vista previa"
     },
+    "HeroProjects": {
+        "no-projects": "Proyecto no encontrado",
+        "liveLink": "Enlace en vivo",
+        "technologies": "Tecnologías"
+    },
     "projects": {
         "blogsy": {
         "title": "Blogsy",
@@ -154,7 +159,7 @@
         "correction": "Pedir la corrección o eliminación de tus datos.",
         "withdraw": "Retirar el consentimiento en cualquier momento (cuando sea aplicable)."
         },
-        "rights_footer": "Para ejercer cualquiera de estos derechos, contáctame en {email}.",
+        "rights_footer": "Para ejercer cualquiera de estos derechos, contáctame en ",
         "security": "Tomo medidas técnicas y organizativas razonables para proteger los datos personales, pero ningún método de transmisión por Internet es 100% seguro. Si sospechas un problema de seguridad, por favor contáctame de inmediato.",
         "children": "Este sitio no está destinado a niños menores de 13 años. No recojo deliberadamente información de niños.",
         "changes": "Puedo actualizar esta política ocasionalmente. La fecha de “Última actualización” en la parte superior indica cuándo fue revisada por última vez. Si hay cambios significativos, haré un esfuerzo razonable por comunicarlos."

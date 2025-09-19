@@ -4,6 +4,7 @@ import React from 'react'
 import Image, { StaticImageData } from 'next/image'
 import Button from '@/components/ui/Button'
 import { motion, Variants, easeOut } from 'framer-motion'
+import { useLocale, useTranslations } from 'next-intl'
 
 type Project = {
     id: string
@@ -58,7 +59,11 @@ const horizontalFade: Variants = {
 }
 
 const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
-    if (!project) return <p>Project not found</p>
+    const locale = useLocale()
+    const t = useTranslations("HeroProjects")
+    if (!project) return <p>
+        {t("no-projects")}
+    </p>
 
     return (
         <main className="relative w-full flex flex-col items-center text-white px-4 md:px-0 pt-24 ">
@@ -76,14 +81,14 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
                     variants={fadeUp}
                 >
                     <motion.h1 
-                        className="mb-4 md:mb-6 tracking-tighter text-center md:text-left" 
+                        className={`${locale === "ar" ? "md:text-right" : "md:text-left"} mb-4 md:mb-6 tracking-tighter text-center `} 
                         custom={1} 
                         variants={fadeUp}
                     >
                         {project.title}
                     </motion.h1>
                     <motion.p
-                        className="main-p text-paleWhite py-6 md:py-12 px-2 text-center md:text-left"
+                        className={`${locale === "ar" ? "md:text-right" : "md:text-left"} main-p text-paleWhite py-6 md:py-12 px-2 text-center `}
                         custom={2}
                         variants={fadeUp}
                     >
@@ -101,7 +106,7 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
                             rel="noopener noreferrer"
                         >
                             <Button bgColor='#ff4533'>
-                                Live Link
+                                {t("liveLink")}
                             </Button>
                         </a>
                     </motion.div>
@@ -135,7 +140,7 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
                 viewport={{ once: true, amount: 0.3 }}
             >
                 {/* Decorative border - hidden on mobile */}
-                <div className='hidden md:block absolute top-0 md:-top-[15%] right-0 w-1/4 h-[120%] border-l border-red'></div>
+                <div className={`${locale === 'ar' ? "left-1/4" : "right-0"} hidden md:block absolute top-0 md:-top-[15%] w-1/4 h-[120%] border-l border-red`}></div>
                 
                 {/* Mobile Image - Show first on mobile */}
                 <motion.div
@@ -165,14 +170,14 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
                     {/* Role and Year */}
                     <div className="mb-8">
                         <motion.h4 
-                            className="text-red px-2 tracking-widest text-center md:text-left" 
+                            className={`${locale === 'ar' ? 'md:text-right' : 'md:text-left'} text-red px-2 tracking-widest text-center`}
                             custom={2} 
                             variants={fadeUp}
                         >
                             {project.role}
                         </motion.h4>
                         <motion.h3 
-                            className="mb-4 md:mb-8 text-white px-2 tracking-tighter text-center md:text-left" 
+                            className={`${locale === 'ar' ? 'md:text-right' : 'md:text-left'} mb-4 md:mb-8 text-white px-2 tracking-tighter text-center `}
                             custom={2} 
                             variants={fadeUp}
                         >
@@ -182,7 +187,7 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
 
                     {/* Description */}
                     <motion.p
-                        className="main-p text-paleWhite px-2 py-6 text-center md:text-left md:pr-4"
+                        className={`${locale === 'ar' ? 'md:text-right' : 'md:text-left'} main-p text-paleWhite px-2 py-6 text-center md:pr-4`}
                         custom={1}
                         variants={fadeUp}
                     >
@@ -191,11 +196,11 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
 
                     {/* Technologies */}
                     <motion.h3 
-                        className="my-12 md:my-6 text-red text-center md:text-left px-2 " 
+                        className={`my-12 md:my-6 text-red text-center px-2 tracking-widest ${locale === 'ar' ? 'md:text-right' : 'md:text-left'}`} 
                         custom={2} 
                         variants={fadeUp}
                     >
-                        Technologies
+                        {t("technologies")}
                     </motion.h3>
                     
                     <motion.ul
@@ -206,7 +211,11 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
                         {project.technologies.map((tech, index) => (
                             <motion.li
                                 key={tech}
-                                className={`para-16 pl-2 text-paleWhite border-l-2 border-red ${index % 2 === 0 ? '-mx-1 md:mx-0' : ''}`}
+                                className={`
+                                    para-16 text-paleWhite border-red 
+                                    ${index % 2 === 0 ? '-mx-1 md:mx-0' : ''}
+                                    ${locale === 'ar' ? 'border-r-2 pr-2' : 'border-l-2 pl-2'}
+                                    `}
                                 custom={4 + index}
                                 variants={fadeUp}
                             >

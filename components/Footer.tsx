@@ -7,15 +7,15 @@ import { usePathname } from 'next/navigation'
 import github from '@/public/icons/github.svg'
 import linkedin from '@/public/icons/linkedin.svg'
 import whatsapp from '@/public/icons/whatsapp.svg'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 const Footer = () => {
     const t = useTranslations("Footer")
     const s = useTranslations("Navbar")
+    const locale = useLocale()
     const pathname = usePathname()
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        // If already on home page, scroll to top
         if (pathname === '/') {
             e.preventDefault()
             window.scrollTo({
@@ -39,14 +39,14 @@ const Footer = () => {
                         <Link 
                             href={`/`} 
                             onClick={handleHomeClick} 
-                            className='text-white/50 hover:text-white hover:translate-x-2 transition-all duration-150 ease-linear'
+                            className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}
                         >
                             {s("home")}
                         </Link>
-                        <Link href={`/about`} className='text-white/50 hover:text-white hover:translate-x-2 transition-all duration-150 ease-linear'>
+                        <Link href={`/about`} className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}>
                             {s("about")}
                         </Link>
-                        <Link href={`/work`} className='text-white/50 hover:text-white hover:translate-x-2 transition-all duration-150 ease-linear'>
+                        <Link href={`/work`} className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}>
                             {s("work")}
                         </Link>
                     </ul>

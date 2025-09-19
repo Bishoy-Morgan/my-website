@@ -21,7 +21,7 @@ body {
 
 /* RTL locale support */
 [dir="rtl"] body {
-  font-family: var(--font-notoSansArabic), var(--font-objectSans), sans-serif;
+  font-family: var(--font-playpenSansArabic), var(--font-objectSans), sans-serif;
 }
 
 /* LTR locale support (optional, since ObjectSans is already default) */
@@ -93,10 +93,21 @@ h3 {
   transition: all .5s ease-out;
 }
 
+[dir="rtl"] .navLinks::before {
+  right: 0;
+  transform: skew(20deg);
+}
+
 .navLinks:hover::before,
 .navLinks.active::before {
   opacity: 0.8;
   transform: translateX(10%) skew(-20deg);
+}
+
+[dir="rtl"] .navLinks:hover::before,
+[dir="rtl"] .navLinks.active::before {
+  opacity: 0.8;
+  transform: translateX(-20%) skew(20deg);
 }
 
 /* Icons */
