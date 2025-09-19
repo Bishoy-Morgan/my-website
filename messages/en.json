@@ -53,5 +53,125 @@
         "copyRights": "Copyright © 2025 Bishoy Morgan, All Rights Reserved",
         "privacyPolicy": "Privacy Policy",
         "cookie": "Cookie-free Website"
+    },
+    "AboutHeroSection": {
+        "title": "Backstage Pass",
+        "subtitle": "Looks like you’re curious about who’s running the show behind the screen",
+        "introTitle": "let me introduce myself",
+        "paragraph": "I’m the person quietly pulling the levers, tweaking the lights, and making sure every scene flows just right. My stage is made of code, my props are pixels, and my goal is to make the audience — your users — walk away impressed without ever seeing the work it took to get there.",
+        "paragraphA": "I’m the person quietly pulling the levers, tweaking the lights, and making sure every scene flows just right. My stage is made of code, my props are pixels, and my goal is to make the audience — your users — walk away impressed without ever seeing the work it took to get there."
+    },
+    "JourneyTimeline": {
+        "spring": "Spring ",
+        "summer": "Summer ",
+        "winter": "Winter ",
+        "2023": "2023",
+        "2024": "2024",
+        "2025": "2025",
+        "openingNight": "Opening Night",
+        "firstCue": "First Cue",
+        "perfectTiming": "Perfect Timing",
+        "speakingTongues": "Speaking in Many Tongues",
+        "encore": "Encore",
+        "subtitleA": "The moment the curtains lifted on my career.",
+        "subtitleB": "My debut project, where the lights first hit the stage.",
+        "subtitleC": "Learning that milliseconds can steal the show.",
+        "subtitleD": "Building experiences that feel native in any language.",
+        "subtitleE": "Delivering work that keeps the audience coming back."
+    },
+    "Philosophy": {
+        "title": "How I Work",
+        "paragraph": "I’m a web developer passionate about crafting digital experiences that are fast, scalable, and user-focused.",
+        "paragraphA": "My work goes beyond writing code, it’s about understanding the culture, context, and needs of the users, especially in complex multilingual environments like the Middle East.",
+        "paragraphB": "Every detail matters, and timing is critical because every millisecond counts in delivering smooth interactions.",
+        "paragraphC": "Behind the scenes, I meticulously optimize performance, localization, and accessibility to build solutions that are reliable and long-lasting.",
+        "paragraphD": "I don’t follow trends; I create technology that stands the test of time.",
+        "paragraphE": "Ultimately, I aim to empower businesses to connect authentically with their audience through elegant, efficient, and meaningful web experiences."
+    },
+    "CoreCompetencies": {
+        "title": "Core Competencies",
+        "js-ts": "JavaScript / TypeScript",
+        "react-next": "React.js / Next.js",
+        "python": "Python",
+        "tailwind-bootstrap": "Tailwind CSS / Bootstrap",
+        "performance-optimization": "Performance Optimization",
+        "graphql-rest-apis": "GraphQL / REST APIs",
+        "multilingual-web-development": "Multilingual Web Development",
+        "performance-analytics": "Web Performance Monitoring & Analytics",
+        "book-call": "Book a Free Discovery Call"
+    },
+    "WorkHero": {
+        "title": "Digital Masterpieces in Progress",
+        "paragraph": "Dive into my curated collection of projects",
+        "paragraphA": "each crafted with precision, creativity, and performance at its core.",
+        "preview": "Preview"
+    },
+    "projects": {
+        "blogsy": {
+            "title": "Blogsy",
+            "subTitle": "A sleek blogging platform designed to deliver a user experience inspired by Medium.com, with clean layouts, intuitive navigation, and seamless reading.",
+            "description": "Blogsy is a sleek, user-friendly blogging platform designed with the latest web technologies to deliver fast and seamless performance. It offers an intuitive editor, customizable themes, and advanced SEO tools to help content creators reach their audience effectively. With responsive design, Blogsy ensures a smooth experience on both desktop and mobile devices. The platform supports multimedia content, social sharing, and analytics integration for tracking engagement. Security and privacy are prioritized with built-in protection features. Blogsy is built to scale, making it suitable for individual bloggers and professional publishing.",
+            "role": "Lead Full-Stack Development"
+        },
+        "legend": {
+            "title": "Legend",
+            "subTitle": "An elegant portfolio and storytelling platform crafted for creatives, featuring smooth animations, responsive layouts, and rich multimedia support.",
+            "description": "Legend is a portfolio website tailored for creative professionals and storytellers to showcase their work in a visually captivating way. It leverages smooth animations, responsive layouts, and dynamic content loading for an immersive user experience. The site is optimized for performance and SEO to help users stand out in a competitive market. Legend supports multiple languages and accessibility standards to reach a broad audience. Built with a modern tech stack, it integrates easily with CMS and social media platforms. Its modular design allows easy customization and extension over time.",
+            "role": "Lead Frontend Developer – Full-Stack Implementation"
+        },
+        "skiable": {
+            "title": "Skiable",
+            "subTitle": "A winter sports booking and management web app, designed for ski resorts and enthusiasts to easily book, manage, and enjoy winter activities.",
+            "description": "Skiable offers an all-in-one platform for winter sports enthusiasts to explore, book, and manage ski trips with ease. It provides real-time updates on weather conditions, available slopes, and equipment rentals. The app features user profiles, secure payments, and customizable itineraries for a personalized experience. Skiable is built with scalability in mind to support multiple resorts and thousands of users simultaneously. It integrates with social media and community forums to foster engagement. The intuitive UI is optimized for both mobile and desktop devices.",
+            "role": "Full Stack Development"
+        },
+        "spaceMortgage": {
+            "title": "Space Mortgage",
+            "subTitle": "Futuristic real estate and mortgage solutions designed to streamline property financing and buying experiences.",
+            "description": "Space Mortgage revolutionizes the property financing process by offering an intuitive platform for buyers and lenders. It features mortgage calculators, loan comparison tools, and real-time consultation booking. The platform supports multilingual interfaces, including Arabic and English, to serve diverse markets. Built for performance and accessibility, Space Mortgage ensures quick load times and mobile responsiveness. It integrates with various financial institutions to provide up-to-date rates and offers. Security and data privacy are at the forefront, with strict compliance to industry standards.",
+            "role": "Frontend & Backend Development"
+        }
+    },
+    "PrivacyPolicy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated: ",
+        "intro": "I respect your privacy. This page explains what data I collect from visitors to this portfolio, why I collect it, and how you can get in touch about your data.",
+        "title1": "1. Information I collect",
+        "title2": "2. How I use your information",
+        "title3": "3. Third-party services",
+        "title4": "4. Cookies",
+        "title5": "5. Your rights",
+        "title6": "6. Security",
+        "title7": "7. Children",
+        "title8": "8. Changes to this policy",
+        "data_contactForm": "Contact form submissions — when you message me I collect the details you provide (name, email, message) so I can reply.",
+        "data_usage": "Anonymous usage data — basic, non-identifiable statistics (such as page visits) may be collected to understand site performance. This process does not use cookies or store personal data.",
+        "use_of_data": "I use data solely to respond to inquiries and to improve this site. I do not use your data for targeted advertising or sell it to third parties.",
+        "third_party": "I may use trusted third-party services (for example: hosting and form handling). These services process limited data on my behalf. Examples include Vercel and Render.",
+        "cookies": "This website is completely cookie-free. No tracking scripts, advertising pixels, or third-party cookies are used.",
+        "rights_list": {
+            "copy": "Request a copy of your personal data.",
+            "correction": "Ask for correction or deletion of your data.",
+            "withdraw": "Withdraw consent at any time (where applicable)."
+        },
+        "rights_footer": "To exercise any of these rights, contact me at {email}.",
+        "security": "I take reasonable technical and organizational measures to protect personal data, but no method of transmission over the Internet is 100% secure. If you suspect a security issue, please contact me immediately.",
+        "children": "This site is not intended for children under 13. I do not knowingly collect information from children.",
+        "changes": "I may update this policy occasionally. The “Last updated” date at the top indicates when it was last revised. If there are significant changes, I will make a reasonable effort to communicate them."
+    },
+    "OopsWrongTurn": {
+        "title": "",
+        "msg1": "This page went out for coffee and never came back.",
+        "msg2": "404: Page not found. Our bad, we checked the couch.",
+        "msg3": "Whoops! Our digital hamster escaped with this page.",
+        "msg4": "This URL is emptier than our office fridge.",
+        "msg5": "The internet gremlins stole this page. We're negotiating.",
+        "Meanwhile": "Meanwhile, here's a button that ",
+        "actually": "actually",
+        "works": "works.",
+        "abandon": "Abandon Hope Here",
+        "hint": "(Try clicking the void for a prize)",
+        "secret_msg": "Here lies the mysterious secret hole that swallows all lost socks!",
+        "redirect": "We'd let you take one, but they'll vanish in 5 seconds..."
     }
 }

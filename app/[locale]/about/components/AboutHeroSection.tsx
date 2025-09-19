@@ -3,8 +3,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import RedLines from '@/components/ui/RedLines'
+import { useTranslations } from 'next-intl'
 
 const AboutHeroSection = () => {
+    const t = useTranslations('AboutHeroSection')
+
     return (
         <main className='relative w-95 md:w-4/5 mx-auto pt-[40%] md:pt-[10%] '>
             <RedLines lines={['middleLeft', 'middleTopRight', 'bottomRight']} />
@@ -15,7 +18,7 @@ const AboutHeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
             >
-                Backstage Pass
+                {t('title')}
             </motion.h1>
 
             {/* Intro */}
@@ -29,22 +32,22 @@ const AboutHeroSection = () => {
                     <span 
                     className="secondary-p italic w-1/2 " 
                     >
-                        Looks like you’re curious about who’s running the show behind the screen
+                        {t('subtitle')}
                     </span>
                     <h3 
                     className="text-white !font-bolder tracking-tighter mt-4 mb-6"
                     >
-                        let me introduce myself
+                        {t("introTitle")}
                     </h3>
                     <p 
                     className="secondary-p leading-relaxed text-paleWhite/70 "                     
                     >
-                        I’m the person quietly pulling the levers, tweaking the lights, and making sure every scene flows just right. My stage is made of code, my props are pixels, and my goal is to make the audience — your users — walk away impressed without ever seeing the work it took to get there.
+                        {t("paragraph")}
                     </p>
                     <p 
                     className="secondary-p mt-6 leading-relaxed text-paleWhite/70 "  
                     >
-                        In my world, timing is everything, a perfectly placed animation, a page that loads in the blink of an eye, because every second counts. And just like a stage set built down to the tiniest screw,<br/>I obsess over the details that most people will never notice, but everyone will feel.
+                        {t("paragraphA")}
                     </p>
                 </div>
             </motion.section>

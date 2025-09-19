@@ -15,18 +15,18 @@ const HeroSection = () => {
 
     return (
         <main className='relative w-full h-dvh min-h-screen max-h-[1080px] flex justify-center overflow-x-hidden'>
-            <section className='w-full md:w-4/5 h-full flex items-end md:items-center justify-center md:justify-cenetr'>
+            <section className='w-full md:w-4/5 h-full flex justify-center md:items-center md:justify-center '>
                 <motion.div
-                    className={`${locale === 'es' ? 'h-[95%]' : 'h-4/5'} w-95 md:w-1/2 flex flex-col items-center justify-end text-center  `}
+                    className={`w-95 h-[95%] md:h-[90%] md:w-1/2 flex flex-col items-center justify-end text-center `}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <h1>
+                    <h1 className='!px-4 md:px-0'>
                         {t("title")}
                     </h1>
-                    <div className="w-4/5 flex justify-start md:mt-6 md:mb-16">
+                    <div className="w-4/5 flex justify-start mb-24 md:mt-6 md:mb-20">
                         <p className="main-p text-paleWhite py-10 px-2">
                             {t("paragraphA")}
                         </p>

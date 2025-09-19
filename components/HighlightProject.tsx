@@ -21,9 +21,9 @@ const HighlightProject: React.FC = () => {
   ]
 
   return (
-    <section className="w-95 md:w-4/5 mx-auto pt-20 flex flex-col items-center">
+    <section className="w-95 md:w-4/5 mx-auto pt-20 md:mt-12 flex flex-col items-center">
       <motion.h2
-        className="mb-20"
+        className="mb-20 md:mb-[10%] text-center"
         initial={{ x: -20, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}

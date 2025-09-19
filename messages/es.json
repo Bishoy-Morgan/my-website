@@ -53,5 +53,126 @@
         "copyRights": "Derechos de autor © 2025 Bishoy Morgan, Todos los derechos reservados",
         "privacyPolicy": "Política de privacidad",
         "cookie": "Sitio web sin cookies"
+    },
+    "AboutHeroSection": {
+        "title": "Pase entre bastidores",
+        "subtitle": "Parece que tienes curiosidad por saber quién está detrás de la pantalla",
+        "introTitle": "déjame presentarme",
+        "paragraph": "Soy la persona que mueve discretamente las palancas, ajusta las luces y se asegura de que cada escena fluya a la perfección. Mi escenario está hecho de código, mis accesorios son píxeles, y mi objetivo es que la audiencia —tus usuarios— salga impresionada sin ver nunca el trabajo que hubo detrás.",
+        "paragraphA": "Soy la persona que mueve discretamente las palancas, ajusta las luces y se asegura de que cada escena fluya a la perfección. Mi escenario está hecho de código, mis accesorios son píxeles, y mi objetivo es que la audiencia —tus usuarios— salga impresionada sin ver nunca el trabajo que hubo detrás."
+    },
+    "JourneyTimeline": {
+        "spring": "Primavera ",
+        "summer": "Verano ",
+        "winter": "Invierno ",
+        "2023": "2023",
+        "2024": "2024",
+        "2025": "2025",
+        "openingNight": "Noche de estreno",
+        "firstCue": "Primera señal",
+        "perfectTiming": "Tiempo perfecto",
+        "speakingTongues": "Hablando en muchos idiomas",
+        "encore": "Bis",
+        "subtitleA": "El momento en que se levantó el telón de mi carrera.",
+        "subtitleB": "Mi proyecto debut, donde las luces me iluminaron por primera vez.",
+        "subtitleC": "Aprendiendo que los milisegundos pueden robarse el show.",
+        "subtitleD": "Construyendo experiencias que se sienten nativas en cualquier idioma.",
+        "subtitleE": "Entregando trabajos que hacen que el público vuelva por más."
+    },
+    "Philosophy": {
+        "title": "Cómo trabajo",
+        "paragraph": "Soy un desarrollador web apasionado por crear experiencias digitales rápidas, escalables y centradas en el usuario.",
+        "paragraphA": "Mi trabajo va más allá de escribir código: se trata de entender la cultura, el contexto y las necesidades de los usuarios, especialmente en entornos multilingües complejos como Oriente Medio.",
+        "paragraphB": "Cada detalle importa, y el tiempo es crítico porque cada milisegundo cuenta en ofrecer interacciones fluidas.",
+        "paragraphC": "Entre bastidores, optimizo meticulosamente el rendimiento, la localización y la accesibilidad para construir soluciones fiables y duraderas.",
+        "paragraphD": "No sigo tendencias; creo tecnología que resiste el paso del tiempo.",
+        "paragraphE": "En última instancia, busco ayudar a las empresas a conectar auténticamente con su audiencia mediante experiencias web elegantes, eficientes y significativas."
+    },
+    "CoreCompetencies": {
+        "title": "Competencias Clave",
+        "js-ts": "JavaScript / TypeScript",
+        "react-next": "React.js / Next.js",
+        "python": "Python",
+        "tailwind-bootstrap": "Tailwind CSS / Bootstrap",
+        "performance-optimization": "Optimización de rendimiento",
+        "graphql-rest-apis": "GraphQL / REST APIs",
+        "multilingual-web-development": "Desarrollo web multilingüe",
+        "performance-analytics": "Monitoreo y analítica de rendimiento web",
+        "book-call": "Reserva una llamada de descubrimiento gratuita"
+    },
+    "WorkHero": {
+        "title": "Obras digitales en progreso",
+        "paragraph": "Sumérgete en mi colección seleccionada de proyectos",
+        "paragraphA": "cada uno creado con precisión, creatividad y rendimiento en su núcleo.",
+        "preview": "Vista previa"
+    },
+    "projects": {
+        "blogsy": {
+        "title": "Blogsy",
+        "subTitle": "Una plataforma de blogs elegante inspirada en Medium.com, con diseños limpios, navegación intuitiva y lectura fluida.",
+        "description": "Blogsy es una plataforma de blogs elegante y fácil de usar, diseñada con las últimas tecnologías web para ofrecer un rendimiento rápido y fluido. Ofrece un editor intuitivo, temas personalizables y herramientas avanzadas de SEO para ayudar a los creadores de contenido a llegar a su audiencia. Con diseño responsivo, asegura una experiencia fluida en escritorio y móvil. La plataforma admite contenido multimedia, opciones para compartir en redes sociales e integración de analíticas para seguimiento de la interacción. La seguridad y la privacidad son prioridad, con funciones de protección integradas. Blogsy está diseñada para escalar, siendo adecuada tanto para blogueros individuales como para publicaciones profesionales.",
+        "role": "Líder en Desarrollo Full-Stack"
+        },
+        "legend": {
+        "title": "Legend",
+        "subTitle": "Una elegante plataforma de portafolio y narración creada para creativos, con animaciones suaves, diseños responsivos y soporte multimedia.",
+        "description": "Legend es un sitio de portafolio pensado para profesionales creativos y narradores, para mostrar su trabajo de forma visualmente atractiva. Utiliza animaciones fluidas, diseños responsivos y carga dinámica de contenido para una experiencia inmersiva. Está optimizado para rendimiento y SEO, ayudando a los usuarios a destacar en un mercado competitivo. Legend admite múltiples idiomas y estándares de accesibilidad para llegar a una audiencia amplia. Construido con una pila tecnológica moderna, se integra fácilmente con CMS y redes sociales. Su diseño modular permite personalización y ampliación sencilla con el tiempo.",
+        "role": "Líder en Desarrollo Frontend – Implementación Full-Stack"
+        },
+        "skiable": {
+        "title": "Skiable",
+        "subTitle": "Una app web de reservas y gestión de deportes de invierno, diseñada para estaciones de esquí y entusiastas que buscan disfrutar fácilmente de actividades invernales.",
+        "description": "Skiable ofrece una plataforma integral para los entusiastas de los deportes de invierno que quieran explorar, reservar y gestionar viajes de esquí fácilmente. Proporciona actualizaciones en tiempo real sobre condiciones climáticas, pistas disponibles y alquiler de equipos. La app incluye perfiles de usuario, pagos seguros e itinerarios personalizados para una experiencia única. Skiable está diseñada con escalabilidad en mente, para admitir múltiples estaciones y miles de usuarios simultáneamente. Se integra con redes sociales y foros comunitarios para fomentar la interacción. La interfaz intuitiva está optimizada tanto para móviles como para escritorio.",
+        "role": "Desarrollo Full-Stack"
+        },
+        "spaceMortgage": {
+        "title": "Space Mortgage",
+        "subTitle": "Soluciones futuristas de bienes raíces e hipotecas, diseñadas para optimizar la financiación y compra de propiedades.",
+        "description": "Space Mortgage revoluciona el proceso de financiación inmobiliaria ofreciendo una plataforma intuitiva para compradores y prestamistas. Incluye calculadoras de hipotecas, herramientas de comparación de préstamos y reservas de consultas en tiempo real. La plataforma admite interfaces multilingües, incluyendo árabe e inglés, para servir a mercados diversos. Construida para rendimiento y accesibilidad, garantiza tiempos de carga rápidos y adaptabilidad móvil. Se integra con instituciones financieras para mostrar tarifas y ofertas actualizadas. La seguridad y la privacidad de los datos son una prioridad, cumpliendo estrictamente con los estándares de la industria.",
+        "role": "Desarrollo Frontend y Backend"
+        }
+    },
+    "PrivacyPolicy": {
+        "title": "Política de Privacidad",
+        "lastUpdated": "Última actualización: ",
+        "intro": "Respeto tu privacidad. Esta página explica qué datos recojo de los visitantes de este portafolio, por qué los recojo y cómo puedes ponerte en contacto sobre tus datos.",
+        "title1": "1. Información que recojo",
+        "title2": "2. Cómo utilizo tu información",
+        "title3": "3. Servicios de terceros",
+        "title4": "4. Cookies",
+        "title5": "5. Tus derechos",
+        "title6": "6. Seguridad",
+        "title7": "7. Niños",
+        "title8": "8. Cambios en esta política",
+        "data_contactForm": "Envíos de formularios de contacto — cuando me envías un mensaje recojo los datos que proporciones (nombre, correo, mensaje) para poder responder.",
+        "data_usage": "Datos de uso anónimos — estadísticas básicas y no identificables (como visitas a páginas) pueden recopilarse para entender el rendimiento del sitio. Este proceso no usa cookies ni almacena datos personales.",
+        "use_of_data": "Uso los datos únicamente para responder consultas y mejorar este sitio. No uso tus datos para publicidad dirigida ni los vendo a terceros.",
+        "third_party": "Puedo usar servicios de terceros de confianza (por ejemplo: alojamiento y manejo de formularios). Estos servicios procesan datos limitados en mi nombre. Ejemplos: Vercel y Render.",
+        "cookies": "Este sitio web no utiliza cookies. No se emplean scripts de rastreo, píxeles publicitarios ni cookies de terceros.",
+        "rights_list": {
+        "copy": "Solicitar una copia de tus datos personales.",
+        "correction": "Pedir la corrección o eliminación de tus datos.",
+        "withdraw": "Retirar el consentimiento en cualquier momento (cuando sea aplicable)."
+        },
+        "rights_footer": "Para ejercer cualquiera de estos derechos, contáctame en {email}.",
+        "security": "Tomo medidas técnicas y organizativas razonables para proteger los datos personales, pero ningún método de transmisión por Internet es 100% seguro. Si sospechas un problema de seguridad, por favor contáctame de inmediato.",
+        "children": "Este sitio no está destinado a niños menores de 13 años. No recojo deliberadamente información de niños.",
+        "changes": "Puedo actualizar esta política ocasionalmente. La fecha de “Última actualización” en la parte superior indica cuándo fue revisada por última vez. Si hay cambios significativos, haré un esfuerzo razonable por comunicarlos."
+    },
+    "OopsWrongTurn": {
+        "title": "",
+        "msg1": "Esta página salió a tomar café y nunca volvió.",
+        "msg2": "404: Página no encontrada. Nuestra culpa, revisamos hasta el sofá.",
+        "msg3": "¡Ups! Nuestro hámster digital se escapó con esta página.",
+        "msg4": "Esta URL está más vacía que la nevera de la oficina.",
+        "msg5": "Los duendes de internet se robaron esta página. Estamos negociando.",
+        "Meanwhile": "Mientras tanto, aquí tienes un botón que ",
+        "actually": "sí",
+        "works": "funciona.",
+        "abandon": "Abandona toda esperanza aquí",
+        "hint": "(Prueba hacer clic en el vacío para un premio)",
+        "secret_msg": "¡Aquí yace el misterioso agujero secreto que se traga todos los calcetines perdidos!",
+        "redirect": "Te dejaríamos llevarte uno, pero desaparecerán en 5 segundos..."
     }
 }
+

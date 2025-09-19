@@ -5,6 +5,7 @@ import Button from '@/components/ui/Button'
 import arrow from '@/public/icons/long-arrow.svg'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 const containerVariant: Variants = {
     hidden: { opacity: 0, y: 20 },
@@ -17,14 +18,6 @@ const buttonHover: Variants = {
         transition: { duration: 0.2, ease: "easeInOut" },
     },
 }
-
-const funnyMessages = [
-    "This page went out for coffee and never came back.",
-    "404: Page not found. Our bad—we checked the couch.",
-    "Whoops! Our digital hamster escaped with this page.",
-    "This URL is emptier than our office fridge.",
-    "The internet gremlins stole this page. We're negotiating."
-]
 
 const FallingSock = ({ delay }: { delay: number }) => (
     <motion.div
@@ -46,10 +39,19 @@ const FallingSock = ({ delay }: { delay: number }) => (
 )
 
 export default function NotFound() {
+    const t = useTranslations('OopsWrongTurn')
     const router = useRouter()
     const [showSecret, setShowSecret] = useState(false)
     const [sockCount] = useState(20)
     const [message, setMessage] = useState("Checking the void...")
+
+    const funnyMessages = [
+        t("msg1"),
+        t("msg2"),
+        t("msg3"),
+        t("msg4"),
+        t("msg5")
+    ]
 
     useEffect(() => {
         setMessage(funnyMessages[Math.floor(Math.random() * funnyMessages.length)])
@@ -87,7 +89,7 @@ export default function NotFound() {
                 </h3>
 
                 <p className="main-p text-center max-w-xl mb-12">
-                    Meanwhile, here&apos;s a button that <i>actually</i> works:
+                    {t("Meanwhile")} <i>{t("actually")}</i> {t("works")}:
                 </p>
 
                 <motion.div whileHover="hover" variants={buttonHover}>
@@ -96,7 +98,7 @@ export default function NotFound() {
                         arrowIcon={arrow}
                         onClick={() => router.push('/')}
                     >
-                        Abandon Hope Here
+                        {t("abandon")}
                     </Button>
                 </motion.div>
 
@@ -107,7 +109,7 @@ export default function NotFound() {
                     whileHover={{ scale: 1.1 }}
                     onClick={handleSecretClick}
                     >
-                        (Try clicking the void for a prize)
+                        {t("hint")}
                     </motion.p>
                 </div>
 
@@ -129,14 +131,13 @@ export default function NotFound() {
                             animate={{ scale: 1 }}
                             transition={{ type: 'spring', stiffness: 100 }}
                             >
-                                Here lies the mysterious secret hole 
-                                that swallows all lost socks!
+                                {t("secret_msg")}
                                 <motion.p 
                                     className="text-paleWhite/50 mt-8 para-sm font-normal"
                                     animate={{ opacity: [0.5, 1] }}
                                     transition={{ duration: 1, repeat: Infinity }}
                                 >
-                                    We&apos;d let you take one, but they&apos;ll vanish in 5 seconds...
+                                    {t("redirect")}
                                 </motion.p>
                             </motion.h1>
                         </motion.div>

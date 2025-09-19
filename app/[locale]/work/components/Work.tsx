@@ -14,6 +14,7 @@ import spaceMortgageDesktop from '@/public/images/projects/spaceMortgage-desktop
 import spaceMortgageMobile from '@/public/images/projects/spaceMortgage-mockup.png'
 import TextTrail from '@/components/ui/TextTrail'
 import RedLines from '@/components/ui/RedLines'
+import { useTranslations } from 'next-intl'
 
 
 const projects = [
@@ -60,6 +61,7 @@ const desktopVariants: Variants = {
 }
 
 const Work: React.FC = () => {
+  const t = useTranslations('WorkHero')
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
 
   return (
@@ -136,8 +138,8 @@ const Work: React.FC = () => {
                   className="md:hidden w-full h-auto max-h-full object-cover object-left-top shadow-lg shadow-[#020202] rounded-b-sm"
                 />
                 <div className="absolute top-0 left-0 w-full h-full group-hover:backdrop-blur-sm transition duration-1000 flex items-center justify-center gap-4">
-                  <h1 className={`${project.title === 'Legend' ? 'text-white' : 'text-black' } tracking-[-0.5rem] text-center opacity-0 scale-100 group-hover:scale-125 group-hover:opacity-100 transition-all duration-1000  `}>
-                    Preview
+                  <h1 className={`${project.title === 'Legend' ? '!text-white' : '!text-black' } tracking-[-0.5rem] text-center opacity-0 scale-100 group-hover:scale-125 group-hover:opacity-100 transition-all duration-1000  `}>
+                    {t('preview')}
                   </h1>
                 </div>
               </motion.div>
@@ -165,8 +167,8 @@ const Work: React.FC = () => {
                   className="w-full h-full object-cover object-top rounded-xl shadow-xl shadow-[#020202]"
                 />
                 <div className="absolute top-0 left-0 w-full h-full rounded-xl group-hover:backdrop-blur-sm transition duration-1000 flex items-center justify-center gap-4">
-                  <h1 className={`${project.title === 'Legend' ? 'text-white' : 'text-black' } tracking-[-0.5rem] text-center opacity-0 scale-50 group-hover:scale-75 group-hover:opacity-100 transition-all duration-1000  `}>
-                    Preview
+                  <h1 className={`${project.title === 'Legend' ? '!text-white' : '!text-black' } tracking-[-0.5rem] text-center opacity-0 scale-50 group-hover:scale-75 group-hover:opacity-100 transition-all duration-1000  `}>
+                    {t('preview')}
                   </h1>
                 </div>
               </motion.div>

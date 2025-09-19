@@ -3,6 +3,7 @@
 import { useRef, useEffect } from 'react'
 import { motion, useAnimation, useInView, Variants } from 'framer-motion'
 import RedLines from '@/components/ui/RedLines'
+import { useTranslations } from 'next-intl'
 
 interface Milestone {
   season: string
@@ -81,40 +82,42 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ m, index }) => {
 }
 
 export default function JourneyTimeline() {
+  const t = useTranslations('JourneyTimeline')
+  
   const milestones: Milestone[] = [
     {
-      season: 'Spring ',
-      year: '2023',
-      title: 'Opening Night',
-      subtitle: 'The moment the curtains lifted on my career.',
+      season: t("spring"),
+      year: t("2023"),
+      title: t("openingNight"),
+      subtitle: t("subtitleA"),
       side: 'right',
     },
     {
-      season: 'Summer ',
-      year: '2023',
-      title: 'First Cue',
-      subtitle: 'My debut project — where the lights first hit the stage.',
+      season: t("summer"),
+      year: t("2023"),
+      title: t("firstCue"),
+      subtitle: t("subtitleB"),
       side: 'left',
     },
     {
-      season: 'Winter ',
-      year: '2023',
-      title: 'Perfect Timing',
-      subtitle: 'Learning that milliseconds can steal the show.',
+      season: t("winter"),
+      year: t("2023"),
+      title: t("perfectTiming"),
+      subtitle: t("subtitleC"),
       side: 'right',
     },
     {
-      season: 'Spring ',
-      year: '2024',
-      title: 'Speaking in Many Tongues',
-      subtitle: 'Building experiences that feel native in any language.',
+      season: t("spring"),
+      year: t("2024"),
+      title: t("speakingTongues"),
+      subtitle: t("subtitleD"),
       side: 'left',
     },
     {
-      season: 'Summer ',
-      year: '2025',
-      title: 'Encore',
-      subtitle: 'Delivering work that keeps the audience coming back.',
+      season: t("summer"),
+      year: t("2025"),
+      title: t("encore"),
+      subtitle: t("subtitleE"),
       side: 'right',
     },
   ]

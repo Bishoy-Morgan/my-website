@@ -7,19 +7,13 @@ import skiableMobile from '@/public/images/projects/skiable-mockup.png'
 import spaceMortgageDesktop from '@/public/images/projects/spaceMortgage-desktop.png'
 import spaceMortgageMobile from '@/public/images/projects/spaceMortgage-mockup.png'
 
-export const projectsData = [
+
+export const getProjectsData = (t: (key: string) => string) => [
     {
         id: '1',
-        title: 'Blogsy',
-        subTitle:
-            'A sleek blogging platform designed to deliver a user experience inspired by Medium.com, with clean layouts, intuitive navigation, and seamless reading.',
-        description: 
-            `Blogsy is a sleek, user-friendly blogging platform designed with the latest web technologies to deliver fast and seamless performance.
-            It offers an intuitive editor, customizable themes, and advanced SEO tools to help content creators reach their audience effectively.
-            With responsive design, Blogsy ensures a smooth experience on both desktop and mobile devices.
-            The platform supports multimedia content, social sharing, and analytics integration for tracking engagement.
-            Security and privacy are prioritized with built-in protection features.
-            Blogsy is built to scale, making it suitable for individual bloggers and professional publishing.`,
+        title: t('projects.blogsy.title'),
+        subTitle: t('projects.blogsy.subTitle'),
+        description: t('projects.blogsy.description'),
         link: 'https://blogsy-ceod.onrender.com',
         image: [blogsyMobile, blogsyDesktop],
         technologies: [
@@ -35,21 +29,14 @@ export const projectsData = [
             'Trix Editor',
             'AOS (Animate On Scroll)'
         ],
-        role: 'Lead Full-Stack Development',
+        role: t('projects.blogsy.role'),
         year: 2025,
     },
     {
         id: '2',
-        title: 'Legend',
-        subTitle:
-            'An elegant portfolio and storytelling platform crafted for creatives, featuring smooth animations, responsive layouts, and rich multimedia support.',
-        description: 
-            `Legend is a portfolio website tailored for creative professionals and storytellers to showcase their work in a visually captivating way.
-            It leverages smooth animations, responsive layouts, and dynamic content loading for an immersive user experience.
-            The site is optimized for performance and SEO to help users stand out in a competitive market.
-            Legend supports multiple languages and accessibility standards to reach a broad audience.
-            Built with a modern tech stack, it integrates easily with CMS and social media platforms.
-            Its modular design allows easy customization and extension over time.`,
+        title: t('projects.legend.title'),
+        subTitle: t('projects.legend.subTitle'),
+        description: t('projects.legend.description'),
         link: 'https://legendalu.com',
         image: [legendMobile, legendDesktop],
         technologies: [
@@ -64,7 +51,7 @@ export const projectsData = [
             'Google Analytics',
             'Vercel'
         ],
-        role: 'Lead Frontend Developer – Full-Stack Implementation',
+        role: t('projects.legend.role'),
         year: 2024,
     },
     {

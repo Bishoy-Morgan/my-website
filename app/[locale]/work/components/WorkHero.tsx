@@ -9,6 +9,7 @@ import legendDesktop from '@/public/images/projects/legend-desktop.png'
 import skiableDesktop from '@/public/images/projects/skiable-desktop.png'
 import spaceMortgageDesktop from '@/public/images/projects/spaceMortgage-desktop.png'
 import RedLines from '@/components/ui/RedLines'
+import { useTranslations } from 'next-intl'
 
 const projects = [
   { id: 1, name: 'Blogsy', image: blogsyDesktop },
@@ -55,6 +56,7 @@ const mobileItemVariants: Variants = {
 }
 
 const WorkHero = () => {
+  const t = useTranslations('WorkHero')
   const skewAngle = 8
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const cardGap = -230
@@ -69,7 +71,7 @@ const WorkHero = () => {
         initial="hidden"
         animate="visible"
       >
-        Digital Masterpieces in Progress
+        {t('title')}
       </motion.h1>
 
       <motion.p
@@ -78,8 +80,9 @@ const WorkHero = () => {
         initial="hidden"
         animate="visible"
       >
-        Dive into my curated collection of projects<br className="hidden md:block"/>
-        <span className="md:hidden"> </span>each crafted with precision, creativity, and performance at its core.
+        {t('paragraph')}
+        <br className="hidden md:block"/>
+        {t('paragraphA')}
       </motion.p>
 
       {/* Desktop Layout */}
