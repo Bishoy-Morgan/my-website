@@ -9,10 +9,6 @@
   --darkRed: #ff220e;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   color: white;
   background: var(--background);
@@ -24,18 +20,11 @@ body {
   font-family: var(--font-playpenSansArabic), var(--font-objectSans), sans-serif;
 }
 
-/* LTR locale support (optional, since ObjectSans is already default) */
-[dir="ltr"] body {
-  font-family: var(--font-objectSans), sans-serif;
-}
-
-/* Typography Styles */
 h1 {
   font-size: clamp(1.5vw, 6.5vw, 5.5vw);
   line-height: clamp(2vw, 7.5vw, 6vw);
   font-weight: 600;
   color: white;
-  padding-inline: 0.5rem;
 }
 
 h2 {
@@ -43,7 +32,6 @@ h2 {
   line-height: clamp(1.8vw, 6vw, 4.8vw);
   color: var(--red);
   font-weight: 600;
-  padding-inline: 0.5rem;
 }
 
 h3 {
@@ -51,7 +39,6 @@ h3 {
   line-height: clamp(1.2vw, 4vw, 3vw);
   color: white;
   font-weight: 600;
-  padding-inline: 0.5rem;
 }
 
 .main-p {
@@ -184,25 +171,11 @@ textarea:focus {
   100% { background-position: -100%; }
 }
 
-/* Scrollbar */
-.no-scrollbar {
-  overflow: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
 .circle-size {
   --circle-size: 3vw;
 }
 
-
-/* Custom Utilities - Replaces tailwind config extensions */
 @layer utilities {
-  /* Sizing */
   .max-w-1920 { max-width: 1920px; }
   .w-95 { width: 95%; }
   .md\:w-full {
@@ -257,7 +230,7 @@ textarea:focus {
   .border-darkRed { border-color: var(--darkRed); }
 }
 
-/* Mobile Layout - Responsive Design */
+/* Mobile Layout */
 @media (max-width: 431px) {
   h1 {
     font-size: clamp(14vw, 14.5vw, 14.5vw);

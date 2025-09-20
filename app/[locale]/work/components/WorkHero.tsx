@@ -116,8 +116,16 @@ const WorkHero = () => {
                 src={project.image}
                 alt={project.name}
                 fill
-                className="object-cover object-left-top rounded-sm"
+                sizes="(min-width: 768px) 32vw, 0px"
+                quality={100}
+                priority={false}
+                loading='eager'
                 draggable={false}
+                style={{ 
+                  objectPosition: 'left top',
+                  objectFit: 'cover',
+                  borderRadius: '0.25rem',
+                }}
               />
             </div>
           )
@@ -142,7 +150,9 @@ const WorkHero = () => {
               src={project.image}
               alt={project.name}
               fill
-              quality={100}
+              sizes="(max-width: 767px) 100vw, 0px"
+              quality={75}
+              loading='eager'
               className="object-cover object-left-top"
               draggable={false}
             />

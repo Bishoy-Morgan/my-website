@@ -4,7 +4,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion'
 import Button from '@/components/ui/Button'
 import arrow from '@/public/icons/long-arrow.svg'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 const containerVariant: Variants = {
@@ -45,17 +45,19 @@ export default function NotFound() {
     const [sockCount] = useState(20)
     const [message, setMessage] = useState("Checking the void...")
 
-    const funnyMessages = [
+    const funnyMessages = useMemo(() => [
         t("msg1"),
         t("msg2"),
         t("msg3"),
         t("msg4"),
-        t("msg5")
-    ]
+        t("msg5"),
+    ], [t])
 
     useEffect(() => {
-        setMessage(funnyMessages[Math.floor(Math.random() * funnyMessages.length)])
-    }, [])
+        const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)]
+        setMessage(randomMsg)
+    }, [funnyMessages])
+
 
     const handleSecretClick = () => {
         setShowSecret(true)

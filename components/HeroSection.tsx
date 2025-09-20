@@ -5,12 +5,11 @@ import { Suspense } from 'react';
 import { motion } from 'framer-motion'
 import Button from './ui/Button'
 import Beams from '@/public/models/Beams';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 
 const HeroSection = () => {
     const t = useTranslations("HeroSection")
-    const locale = useLocale();
     const [showBeams, setShowBeams] = useState(false);
 
     return (

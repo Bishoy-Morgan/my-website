@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+// import Script from "next/script";
+import "./globals.css";
 import localFont from "next/font/local";
 import { Playpen_Sans_Arabic } from "next/font/google";
-import "./globals.css";
 import Navbar from "@/components/Navbar";
 import LinedBackground from "@/components/ui/LinedBackground";
 import { NextIntlClientProvider } from "next-intl";
@@ -27,7 +27,7 @@ const ObjectSans = localFont({
 });
 
 const playpenSansArabic = Playpen_Sans_Arabic({
-  subsets: ["arabic"],
+  subsets: ['latin', 'arabic'],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-playpenSansArabic",
   display: "swap",
@@ -81,7 +81,7 @@ export default async function LocaleLayout({
         dir={locale === "ar" ? "rtl" : "ltr"}
         className={
           locale === "ar"
-            ? `${playpenSansArabic.className}`
+            ? `${playpenSansArabic.className} antialiased`
             : `${ObjectSans.className} antialiased`
         }
       >

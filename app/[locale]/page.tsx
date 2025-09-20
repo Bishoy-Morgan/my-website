@@ -7,12 +7,12 @@ import HighlightProject from "@/components/HighlightProject";
 
 export default function Home() {
   return (
-      <main>
+      <div>
         <HeroSection />
         <BehindTheScreen />
         <HighlightProject />
         <CTA />
         <Footer />
-      </main>
+      </div>
   );
 }
