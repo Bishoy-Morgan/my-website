@@ -5,13 +5,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, Variants } from 'framer-motion'
 import blogsyDesktop from '@/public/images/projects/blogsy-desktop.png'
-import blogsyMobile from '@/public/images/projects/blogsy-mockup1.png'
+import blogsyMobile from '@/public/images/projects/blogsy-mockup.png'
 import legendDesktop from '@/public/images/projects/legend-desktop.png'
 import legendMobile from '@/public/images/projects/legend-mockup.png'
 import skiableDesktop from '@/public/images/projects/skiable-desktop.png'
 import skiableMobile from '@/public/images/projects/skiable-mockup.png'
 import spaceMortgageDesktop from '@/public/images/projects/spaceMortgage-desktop.png'
 import spaceMortgageMobile from '@/public/images/projects/spaceMortgage-mockup.png'
+import mapdxbDesktop from '@/public/images/projects/maps-desktop.png'
+import mapdxbMobile from '@/public/images/projects/maps-mockup.png'
+import schoolsphereDesktop from '@/public/images/projects/schoolsphere-desktop.png'
+import schoolsphereMobile from '@/public/images/projects/schoolsphere-mockup.png'
 import TextTrail from '@/components/ui/TextTrail'
 import RedLines from '@/components/ui/RedLines'
 import { useTranslations } from 'next-intl'
@@ -32,15 +36,27 @@ const projects = [
   },
   {
     id: '3',
-    title: 'Skiable',
-    link: 'https://blogsy-ceod.onrender.com',
-    image: [skiableMobile, skiableDesktop],
+    title: 'MapDXB',
+    link: 'https://mapdxb.com/',
+    image: [mapdxbMobile, mapdxbDesktop],
   },
   {
     id: '4',
+    title: 'Skiable',
+    link: 'https://skiable.vercel.app/',
+    image: [skiableMobile, skiableDesktop],
+  },
+  {
+    id: '5',
     title: 'Space Mortgage',
-    link: 'https://legendalu.com',
+    link: 'https://spacemortgage.ae',
     image: [spaceMortgageMobile, spaceMortgageDesktop],
+  },
+  {
+    id: '6',
+    title: 'Schoolsphere',
+    link: 'https://schoolsphere-one.vercel.app/',
+    image: [schoolsphereMobile, schoolsphereDesktop],
   },
 ]
 

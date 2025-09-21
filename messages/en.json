@@ -124,6 +124,12 @@
             "description": "Legend is a portfolio website tailored for creative professionals and storytellers to showcase their work in a visually captivating way. It leverages smooth animations, responsive layouts, and dynamic content loading for an immersive user experience. The site is optimized for performance and SEO to help users stand out in a competitive market. Legend supports multiple languages and accessibility standards to reach a broad audience. Built with a modern tech stack, it integrates easily with CMS and social media platforms. Its modular design allows easy customization and extension over time.",
             "role": "Lead Frontend Developer – Full-Stack Implementation"
         },
+        "schoolsphere": {
+            "title": "SchoolSphere",
+            "subTitle": "A school management platform to add, update, and display school information with images.",
+            "description": "SchoolSphere is a comprehensive school management platform built with Next.js, MySQL, and Docker. It enables administrators to efficiently add, update, and display school details along with images. Designed with performance and scalability in mind, the platform provides an intuitive interface for managing data and ensures a seamless user experience on both desktop and mobile devices.",
+            "role": "Full Stack Development"
+        },
         "skiable": {
             "title": "Skiable",
             "subTitle": "A winter sports booking and management web app, designed for ski resorts and enthusiasts to easily book, manage, and enjoy winter activities.",
@@ -135,6 +141,12 @@
             "subTitle": "Futuristic real estate and mortgage solutions designed to streamline property financing and buying experiences.",
             "description": "Space Mortgage revolutionizes the property financing process by offering an intuitive platform for buyers and lenders. It features mortgage calculators, loan comparison tools, and real-time consultation booking. The platform supports multilingual interfaces, including Arabic and English, to serve diverse markets. Built for performance and accessibility, Space Mortgage ensures quick load times and mobile responsiveness. It integrates with various financial institutions to provide up-to-date rates and offers. Security and data privacy are at the forefront, with strict compliance to industry standards.",
             "role": "Frontend & Backend Development"
+        },
+        "mapdxb": {
+            "title": "MAP DXB",
+            "subTitle": "A real estate platform for buying, selling, and renting properties in the UAE, supporting multiple languages.",
+            "description": "MAP DXB is a property marketplace built using Next.js and GraphQL, supporting both Arabic and English. The platform allows users to explore, buy, sell, and rent properties across Dubai and the UAE. It integrates APIs for property listings, offers a responsive UI, and provides a seamless multilingual experience. Optimized for performance, MAP DXB delivers fast load times and a smooth user journey across devices.",
+            "role": "Front-End Development"
         }
     },
     "PrivacyPolicy": {

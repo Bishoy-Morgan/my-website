@@ -6,16 +6,21 @@ import { motion, Variants } from 'framer-motion'
 
 import blogsyDesktop from '@/public/images/projects/blogsy-desktop.png'
 import legendDesktop from '@/public/images/projects/legend-desktop.png'
+import schoolsphereDesktop from '@/public/images/projects/schoolsphere-desktop.png'
 import skiableDesktop from '@/public/images/projects/skiable-desktop.png'
 import spaceMortgageDesktop from '@/public/images/projects/spaceMortgage-desktop.png'
+import mapdxbDesktop from '@/public/images/projects/maps-desktop.png'
 import RedLines from '@/components/ui/RedLines'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 const projects = [
   { id: 1, name: 'Blogsy', image: blogsyDesktop },
   { id: 2, name: 'Legend', image: legendDesktop },
-  { id: 3, name: 'Skiable', image: skiableDesktop },
-  { id: 4, name: 'Space Mortgage', image: spaceMortgageDesktop },
+  { id: 3, name: 'MapDXB', image: mapdxbDesktop },
+  { id: 4, name: 'Skiable', image: skiableDesktop },
+  { id: 5, name: 'Space Mortgage', image: spaceMortgageDesktop },
+  { id: 6, name: 'Schoolsphere', image: schoolsphereDesktop },
 ]
 
 const containerVariants: Variants = {
@@ -59,7 +64,7 @@ const WorkHero = () => {
   const t = useTranslations('WorkHero')
   const skewAngle = 8
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const cardGap = -230
+  const cardGap = -300
 
   return (
     <section className="relative w-95 md:w-4/5 mx-auto pb-24 pt-[40%] md:pt-[10%] flex flex-col items-center">
@@ -96,38 +101,44 @@ const WorkHero = () => {
         {projects.map((project, index) => {
           const isHovered = hoveredIndex === index
           return (
-            <div
-              key={project.id}
-              className="relative rounded-sm transition-transform duration-500 ease-in-out cursor-pointer"
-              style={{
-                width: '28vw', 
-                aspectRatio: '5 / 3.5', 
-                transformOrigin: 'center',
-                transform: `skewY(${skewAngle}deg) translateY(${isHovered ? -80 : 0}px)`,
-                zIndex: projects.length - index,
-                minWidth: '28vw', 
-                maxWidth: '32vw',
-                marginRight: index < projects.length - 1 ? `${cardGap}px` : '0',
-              }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+            <Link 
+            href={`/projects/${project.id}`} 
+            key={project.id} 
+            aria-label={project.name}
+            className='relative'
             >
-              <Image
-                src={project.image}
-                alt={project.name}
-                fill
-                sizes="(min-width: 768px) 32vw, 0px"
-                quality={100}
-                priority={false}
-                loading='eager'
-                draggable={false}
-                style={{ 
-                  objectPosition: 'left top',
-                  objectFit: 'cover',
-                  borderRadius: '0.25rem',
+              <div
+                className="relative rounded-sm transition-transform duration-500 ease-in-out cursor-pointer"
+                style={{
+                  width: '28vw', 
+                  aspectRatio: '5 / 3.5', 
+                  transformOrigin: 'center',
+                  transform: `skewY(${skewAngle}deg) translateY(${isHovered ? -80 : 0}px)`,
+                  zIndex: projects.length - index,
+                  minWidth: '28vw', 
+                  maxWidth: '32vw',
+                  marginRight: index < projects.length - 1 ? `${cardGap}px` : '0',
                 }}
-              />
-            </div>
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  fill
+                  sizes="(min-width: 768px) 28vw, 0px"
+                  quality={100}
+                  priority={false}
+                  loading='eager'
+                  draggable={false}
+                  style={{ 
+                    objectPosition: 'left top',
+                    objectFit: 'cover',
+                    borderRadius: '0.25rem',
+                  }}
+                />
+              </div>
+            </Link>
           )
         })}
       </motion.div>

@@ -4,7 +4,7 @@ import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import HeroProjects from '@/app/[locale]/projects/components/HeroProjects'
 import Footer from '@/components/Footer'
-import { getProjectsData } from '@/lib/projectsData' // Function that accepts translation function
+import { getProjectsData } from '@/lib/projectsData'
 
 export default function ProjectsPage() {
     const params = useParams()
