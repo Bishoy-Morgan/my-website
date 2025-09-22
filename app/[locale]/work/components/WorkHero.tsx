@@ -62,9 +62,9 @@ const mobileItemVariants: Variants = {
 
 const WorkHero = () => {
   const t = useTranslations('WorkHero')
-  const skewAngle = 8
+  const skewAngle = 2
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const cardGap = -300
+  const cardGap = -28
 
   return (
     <section className="relative w-95 md:w-4/5 mx-auto pb-24 pt-[40%] md:pt-[10%] flex flex-col items-center">
@@ -92,8 +92,8 @@ const WorkHero = () => {
 
       {/* Desktop Layout */}
       <motion.div
-        className="hidden md:flex relative w-full items-center justify-center overflow-visible px-4 min-h-[70vh]"
-        style={{ perspective: '1200px' }}
+        className="hidden md:flex relative w-full items-end justify-center px-4 min-h-[60vh] "
+        style={{ perspective: '800px' }}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -108,16 +108,16 @@ const WorkHero = () => {
             className='relative'
             >
               <div
-                className="relative rounded-sm transition-transform duration-500 ease-in-out cursor-pointer"
+                className="relative rounded-sm transition-transform duration-500 ease-in-out cursor-pointer "
                 style={{
-                  width: '28vw', 
+                  width: '32vw', 
                   aspectRatio: '5 / 3.5', 
                   transformOrigin: 'center',
-                  transform: `skewY(${skewAngle}deg) translateY(${isHovered ? -80 : 0}px)`,
+                  transform: `skewY(${skewAngle}deg) translateY(${isHovered ? -120 : 0}px)`,
                   zIndex: projects.length - index,
-                  minWidth: '28vw', 
-                  maxWidth: '32vw',
-                  marginRight: index < projects.length - 1 ? `${cardGap}px` : '0',
+                  minWidth: '32vw', 
+                  maxWidth: '34vw',
+                  marginRight: index < projects.length - 1 ? `${cardGap}rem` : '0',
                 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -126,7 +126,7 @@ const WorkHero = () => {
                   src={project.image}
                   alt={project.name}
                   fill
-                  sizes="(min-width: 768px) 28vw, 0px"
+                  sizes="(min-width: 768px) 32vw, 0px"
                   quality={100}
                   priority={false}
                   loading='eager'
@@ -136,6 +136,7 @@ const WorkHero = () => {
                     objectFit: 'cover',
                     borderRadius: '0.25rem',
                   }}
+                  className='shadow-lg shadow-black'
                 />
               </div>
             </Link>
