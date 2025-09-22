@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Suspense, useRef } from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, Variants } from 'framer-motion'
@@ -16,7 +16,7 @@ import mapdxbDesktop from '@/public/images/projects/maps-desktop.png'
 import mapdxbMobile from '@/public/images/projects/maps-mockup.png'
 import schoolsphereDesktop from '@/public/images/projects/schoolsphere-desktop.png'
 import schoolsphereMobile from '@/public/images/projects/schoolsphere-mockup.png'
-import TextTrail from '@/components/ui/TextTrail'
+// import TextTrail from '@/components/ui/TextTrail'
 import RedLines from '@/components/ui/RedLines'
 import { useTranslations } from 'next-intl'
 
@@ -102,7 +102,7 @@ const Work: React.FC = () => {
               viewport={{ once: true, amount: 0.5 }}
               variants={titleVariants}
             >
-              <Suspense>
+              {/* <Suspense>
                 <TextTrail
                   text={project.title}
                   animateColor={true}
@@ -111,7 +111,10 @@ const Work: React.FC = () => {
                   noiseScale={0.002}
                   backgroundColor="transparent"
                 />
-              </Suspense>
+              </Suspense> */}
+              <h5 className='text-center text-8xl tracking-[-0.5rem] font-bold '>
+                {project.title}
+              </h5>
             </motion.div>
 
             <h1 className='md:hidden absolute top-[15%] left-1/2 -translate-x-1/2 w-full text-center z-10 '>
