@@ -6,6 +6,7 @@ import { Playpen_Sans_Arabic } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import LinedBackground from "@/components/ui/LinedBackground";
 import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 const ObjectSans = localFont({
@@ -52,13 +53,7 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch {
-    notFound();
-  }
-
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>
