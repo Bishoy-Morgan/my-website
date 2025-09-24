@@ -1,13 +1,27 @@
+'use client'
+
 import React from 'react'
+import { motion } from 'framer-motion'
 
-type LinePosition = "topRight" | "middleLeft" | "topRightHalf" | "middleRight" | "bottomLeft" | "middleTopRight" | "middleTopLeft" | "bottomRight";
+type LinePosition =
+    | 'topRight'
+    | 'middleLeft'
+    | 'topRightHalf'
+    | 'middleRight'
+    | 'bottomLeft'
+    | 'middleTopRight'
+    | 'middleTopLeft'
+    | 'bottomRight'
 
-type RedLinesProps = {
-    lines: LinePosition[]
-    className?: string
-}
+    type RedLinesProps = {
+        lines: LinePosition[]
+        className?: string
+    }
 
-const lineStyles: Record<string, { className: string; style?: React.CSSProperties }> = {
+const lineStyles: Record<
+    string,
+    { className: string; style?: React.CSSProperties }
+    > = {
     topRight: {
         className: 'top-0 right-0 w-1/4 border-r border-red',
         style: { height: '7%' },
@@ -42,18 +56,29 @@ const lineStyles: Record<string, { className: string; style?: React.CSSPropertie
     },
 }
 
-
 const RedLines: React.FC<RedLinesProps> = ({ lines, className = '' }) => {
     return (
         <>
-            {lines.map((pos) => {
+            {lines.map((pos, index) => {
                 const { className: lineClass, style } = lineStyles[pos] || {}
                 if (!lineClass) return null
+
+                const isEven = index % 2 === 0
+
                 return (
-                    <div
+                    <motion.div
                         key={pos}
-                        className={`absolute -z-10 ${lineClass} ${className} `}
+                        className={`absolute -z-10 ${lineClass} ${className}`}
                         style={style}
+                        initial={{ y: 0 }}
+                        animate={{
+                        y: isEven ? [0, -2, 0, 6, 0] : [0, 10, 0, -8, 0],
+                        }}
+                        transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: 'easeInOut',
+                        }}
                     />
                 )
             })}
