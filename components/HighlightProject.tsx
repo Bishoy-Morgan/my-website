@@ -101,7 +101,7 @@ const HighlightProject: React.FC = () => {
                 width={1.5 * 800}
                 height={800}
                 quality={75}
-                priority
+                loading='eager'
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 80vw, 999px"
                 className="shadow-2xl"
                 style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
@@ -122,7 +122,7 @@ const HighlightProject: React.FC = () => {
                 width={0.49 * 382}
                 height={382}
                 quality={75}
-                priority
+                loading='eager'
                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 200px, 189px"
                 style={{ width: 'auto', height: 'auto', objectFit: 'cover', borderRadius: '2rem' }}
               />

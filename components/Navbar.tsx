@@ -52,17 +52,19 @@ const Navbar: React.FC = () => {
                 <nav className="w-4/5 mx-auto flex items-center justify-between">
                     <ul className="w-1/4 flex items-center justify-between text-sm">
                         {navLinks.map(({ href, label }) => (
-                            <Link
-                                key={href}
-                                href={href}
-                                className={`navLinks ${
-                                pathname === href ? 'active font-semibold tracking-tighter' : ''
-                                }`}
-                            >
-                                {label}
-                            </Link>
+                            <li key={href}>
+                                <Link
+                                    href={href}
+                                    className={`navLinks ${
+                                    pathname === href ? 'active font-semibold tracking-tighter' : ''
+                                    }`}
+                                >
+                                    {label}
+                                </Link>
+                            </li>
                         ))}
                     </ul>
+
 
                     <div className="w-[31%] flex items-center justify-between pr-2">
                         <a
@@ -145,16 +147,19 @@ const Navbar: React.FC = () => {
                         </motion.button>
 
                         {/* Nav Links */}
-                        {navLinks.map(({ href, label }) => (
-                            <Link
-                                key={href}
-                                href={href}
-                                className={`navLinks ${pathname === href ? 'text-red' : ''}`}
-                                onClick={() => setMenuOpen(false)}
-                            >
-                                {label}
-                            </Link>
-                        ))}
+                        <ul className="flex flex-col items-center gap-y-10">
+                            {navLinks.map(({ href, label }) => (
+                                <li key={href}>
+                                    <Link
+                                        href={href}
+                                        className={`navLinks ${pathname === href ? 'text-red' : ''}`}
+                                        onClick={() => setMenuOpen(false)}
+                                    >
+                                        {label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
 
                         <div className="w-1/3 flex items-center justify-between mt-8">
                             <a
