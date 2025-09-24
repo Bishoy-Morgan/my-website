@@ -1,15 +1,15 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import Button from './ui/Button'
-import Beams from '@/public/models/Beams';
+// import Beams from '@/public/models/Beams';
 import { useTranslations } from 'next-intl';
 
 
 const HeroSection = () => {
     const t = useTranslations("HeroSection")
-    const [showBeams, setShowBeams] = useState(false);
+    // const [showBeams, setShowBeams] = useState(false);
 
     return (
         <main className='relative w-full h-dvh min-h-screen max-h-[1080px] flex justify-center overflow-x-hidden'>
@@ -43,7 +43,7 @@ const HeroSection = () => {
                 </div>
                 </motion.div>
 
-                <motion.div
+                {/* <motion.div
                     className='black-gradient absolute top-0 left-0 w-full md:px-1 h-full -z-10 md:-z-50 opacity-40 md:opacity-100'
                     onViewportEnter={() => setShowBeams(true)}
                     viewport={{ once: true, margin: '200px' }}
@@ -61,7 +61,7 @@ const HeroSection = () => {
                         />
                     )}
                     
-                </motion.div>
+                </motion.div> */}
             </section>
         </main>
     )
