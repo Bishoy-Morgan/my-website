@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import HighlightProject from "@/components/HighlightProject";
 
+export const dynamic = "force-static";
 
 export default function Home() {
   return (
