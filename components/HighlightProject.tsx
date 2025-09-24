@@ -67,7 +67,7 @@ const HighlightProject: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-all duration-300 ease-in-out flex flex-col items-center justify-center gap-y-10 z-30">
+            <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 backdrop-blur-xs transition-all duration-300 ease-in-out flex flex-col items-center justify-center gap-y-10 z-30">
               <a 
               href="https://blogsy-ceod.onrender.com" 
               target="_blank"
@@ -97,12 +97,14 @@ const HighlightProject: React.FC = () => {
             >
               <Image
                 src={project.desktopImage}
-                alt={`Blogsy Desktop Image`}
-                fill
+                alt="Blogsy Desktop Image"
+                width={1.5 * 800}
+                height={800}
                 quality={75}
                 priority
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 80vw, 999px"
-                className="shadow-2xl object-contain"
+                className="shadow-2xl"
+                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
               />
             </motion.div>
 
@@ -117,13 +119,12 @@ const HighlightProject: React.FC = () => {
               <Image
                 src={project.mobileImage}
                 alt={`Blogsy Mobile Image`}
-                width={189}
+                width={0.49 * 382}
                 height={382}
                 quality={75}
                 priority
                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 200px, 189px"
-                className="rounded-[2rem] object-cover"
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ width: 'auto', height: 'auto', objectFit: 'cover', borderRadius: '2rem' }}
               />
             </motion.div>
           </motion.div>

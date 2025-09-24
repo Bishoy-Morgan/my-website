@@ -12,7 +12,7 @@
 body {
   color: white;
   background: var(--background);
-  font-family: var(--font-objectSans), sans-serif; /* Default font */
+  font-family: var(--font-objectSans), sans-serif;
 }
 
 /* RTL locale support */

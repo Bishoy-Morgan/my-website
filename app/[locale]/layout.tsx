@@ -6,7 +6,6 @@ import { Playpen_Sans_Arabic } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import LinedBackground from "@/components/ui/LinedBackground";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 const ObjectSans = localFont({
@@ -27,10 +26,10 @@ const ObjectSans = localFont({
 });
 
 const playpenSansArabic = Playpen_Sans_Arabic({
-  subsets: ['latin', 'arabic'],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-playpenSansArabic",
-  display: "swap",
+  subsets: ['arabic'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-playpenSansArabic',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {

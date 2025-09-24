@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Button from './ui/Button'
 import dynamic from "next/dynamic";
 import { useTranslations } from 'next-intl';
+import RedLines from './ui/RedLines';
 
 const Beams = dynamic(() => import("@/components/ui/Beams"), { ssr: false });
 
@@ -14,6 +15,9 @@ const HeroSection = () => {
 
     return (
         <main className='relative w-full h-dvh min-h-screen max-h-[1080px] flex justify-center overflow-x-hidden'>
+            <div className='absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-full -z-10 opacity-10 md:opacity-100'>
+                <RedLines className='hidden md:block' lines={['bottomRight', 'middleRight', 'bottomLeft', 'middleTopLeft']} />
+            </div>
             <section className='w-full md:w-4/5 h-full flex justify-center md:items-center md:justify-center '>
                 <motion.div
                 className="w-95 h-[95%] md:h-4/5 md:w-1/2 md:mt-[5%] flex flex-col justify-between text-center"

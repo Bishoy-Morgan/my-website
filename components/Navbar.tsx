@@ -20,7 +20,12 @@ const Navbar: React.FC = () => {
     const [isContactOpen, setContactOpen] = useState(false)
     const [isMenuOpen, setMenuOpen] = useState(false)
     const pathname = usePathname()
-    console.log(pathname)
+
+    const navLinks = [
+        { href: `/${locale}`, label: t('home') },
+        { href: `/${locale}/about`, label: t('about') },
+        { href: `/${locale}/work`, label: t('work') }
+    ]
 
     return (
         <>
@@ -31,49 +36,48 @@ const Navbar: React.FC = () => {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 className="hidden md:flex absolute top-0 left-0 z-50 w-full h-[15%] items-center"
             >
-                <div className="relative w-[10%] h-full">
+                <div className="flex items-center justify-center w-[10%] h-full ">
                     <Image
                         src={morganLogo}
                         alt="Morgan Logo"
-                        fill
-                        priority
+                        width={200}
+                        height={80}
+                        quality={75}
+                        loading='eager'
                         sizes="(max-width: 768px) 40vw, 20vw"
-                        className="object-contain"
+                        style={{ objectFit: 'contain', width: '100%', height: '100%' }}
                     />
                 </div>
+
                 <nav className="w-4/5 mx-auto flex items-center justify-between">
                     <ul className="w-1/4 flex items-center justify-between text-sm">
-                        <Link
-                            href={`/${locale}`}
-                            className={`navLinks ${pathname === `/${locale}` ? 'active font-semibold tracking-tighter' : ''}`}
-                        >
-                            {t('home')}
-                        </Link>
-                        <Link
-                            href={`/${locale}/about`}
-                            className={`navLinks ${pathname === `/${locale}/about` ? 'active font-semibold tracking-tighter' : ''}`}
-                        >
-                            {t('about')}
-                        </Link>
-                        <Link
-                            href={`/${locale}/work`}
-                            className={`navLinks pr-2 ${pathname === `/${locale}/work` ? 'active font-semibold tracking-tighter' : ''}`}
-                        >
-                            {t('work')}
-                        </Link>
+                        {navLinks.map(({ href, label }) => (
+                            <Link
+                                key={href}
+                                href={href}
+                                className={`navLinks ${
+                                pathname === href ? 'active font-semibold tracking-tighter' : ''
+                                }`}
+                            >
+                                {label}
+                            </Link>
+                        ))}
                     </ul>
+
                     <div className="w-[31%] flex items-center justify-between pr-2">
                         <a
-                            href={`https://www.linkedin.com/in/bishoy-morgan-ba979a310`}
-                            target="_blank"
-                            className="navLinks"
+                        href="https://www.linkedin.com/in/bishoy-morgan-ba979a310"
+                        target="_blank"
+                        aria-label="LinkedIn"
+                        className="navLinks"
                         >
                             <Image src={linkedin} alt="LinkedIn" width={20} height={20} className="icon-vw" />
                         </a>
                         <a
-                            href={`https://github.com/Bishoy-Morgan`}
-                            target="_blank"
-                            className="navLinks -ml-2"
+                        href="https://github.com/Bishoy-Morgan"
+                        target="_blank"
+                        aria-label="GitHub"
+                        className="navLinks -ml-2"
                         >
                             <Image src={github} alt="GitHub" width={20} height={20} className="icon-vw" />
                         </a>
@@ -92,20 +96,22 @@ const Navbar: React.FC = () => {
                 transition={{ duration: 0.5, ease: 'easeOut' }}
                 className="flex md:hidden absolute top-0 left-0 z-50 w-full h-[15%] items-center justify-between px-4"
             >
-                <div className="relative w-[30%] h-4/5 ">
+                <div className="flex items-center justify-center w-[30%] h-4/5">
                     <Image
                         src={morganLogo}
                         alt="Morgan Logo"
-                        fill
+                        width={120}
+                        height={48}
                         priority
-                        quality={100}
+                        quality={75}
                         sizes="40vw"
                         className="object-cover"
                     />
                 </div>
                 <button
-                    onClick={() => setMenuOpen(true)}
-                    className='mr-[5%] bg-red p-2 rounded-full'
+                onClick={() => setMenuOpen(true)}
+                aria-label="Open menu"
+                className="mr-[5%] bg-red p-2 rounded-full"
                 >
                     <Image src={menuIcon} alt="Menu" width={32} height={32} />
                 </button>
@@ -117,70 +123,76 @@ const Navbar: React.FC = () => {
                     <motion.div
                         initial={{ opacity: 0, x: '100%' }}
                         animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: '100%', transition: { duration: 0.8, ease: 'easeInOut', delay: 0.2 } }}
+                        exit={{
+                        opacity: 0,
+                        x: '100%',
+                        transition: { duration: 0.8, ease: 'easeInOut', delay: 0.2 }
+                        }}
                         transition={{ duration: 0.4, ease: 'easeInOut' }}
                         className="md:hidden fixed inset-0 z-[60] bg-background flex flex-col items-center justify-center gap-y-10 text-white"
                     >
                         {/* Close Button */}
                         <motion.button
-                            initial={{ rotate: 90, opacity: 0 }}
-                            animate={{ rotate: 0, opacity: 1 }}
-                            exit={{ rotate: 90, opacity: 0 }}
-                            transition={{ duration: 0.4 }}
-                            className="absolute top-8 right-8 text-2xl rounded-full bg-red p-2"
-                            onClick={() => setMenuOpen(false)}
+                        initial={{ rotate: 90, opacity: 0 }}
+                        animate={{ rotate: 0, opacity: 1 }}
+                        exit={{ rotate: 90, opacity: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="absolute top-8 right-8 text-2xl rounded-full bg-red p-2"
+                        onClick={() => setMenuOpen(false)}
+                        aria-label="Close menu"
                         >
-                            <Image src={closeIcon} alt='Close button' width={24} height={24} />
+                            <Image src={closeIcon} alt="Close button" width={24} height={24} />
                         </motion.button>
 
                         {/* Nav Links */}
-                        <Link
-                            href={`/${locale}`}
-                            className={`navLinks ${pathname === `/${locale}` ? 'text-red' : ''}`}
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            {t('home')}
-                        </Link>
-                        <Link
-                            href={`/${locale}/about`}
-                            className={`navLinks ${pathname === `/${locale}/about` ? 'text-red' : ''}`}
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            {t('about')}
-                        </Link>
-                        <Link
-                            href={`/${locale}/work`}
-                            className={`navLinks ${pathname === `/${locale}/work` ? 'text-red' : ''}`}
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            {t('work')}
-                        </Link>
+                        {navLinks.map(({ href, label }) => (
+                            <Link
+                                key={href}
+                                href={href}
+                                className={`navLinks ${pathname === href ? 'text-red' : ''}`}
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                {label}
+                            </Link>
+                        ))}
 
                         <div className="w-1/3 flex items-center justify-between mt-8">
                             <a
-                                href={`https://www.linkedin.com/in/bishoy-morgan-ba979a310`}
+                                href="https://www.linkedin.com/in/bishoy-morgan-ba979a310"
                                 target="_blank"
-                                
+                                aria-label="LinkedIn"
                             >
-                                <Image src={linkedin} alt="LinkedIn" width={20} height={20} className="icon-vw border-l border-red pl-2" />
+                                <Image
+                                src={linkedin}
+                                alt="LinkedIn"
+                                width={20}
+                                height={20}
+                                className="icon-vw border-l border-red pl-2"
+                                />
                             </a>
                             <a
-                                href={`https://github.com/Bishoy-Morgan`}
+                                href="https://github.com/Bishoy-Morgan"
                                 target="_blank"
-                                
+                                aria-label="GitHub"
                             >
-                                <Image src={github} alt="GitHub" width={20} height={20} className="icon-vw border-l border-red pl-2" />
+                                <Image
+                                src={github}
+                                alt="GitHub"
+                                width={20}
+                                height={20}
+                                className="icon-vw border-l border-red pl-2"
+                                />
                             </a>
                         </div>
 
                         {/* Contact Button */}
                         <Button
-                            onClick={() => {
-                                setContactOpen(true)
-                                setMenuOpen(false)
-                            }}
-                            bgColor="#ff220e"
-                            className='mt-20'
+                        onClick={() => {
+                            setContactOpen(true)
+                            setMenuOpen(false)
+                        }}
+                        bgColor="#ff220e"
+                        className="mt-20"
                         >
                             {t('button')}
                         </Button>
