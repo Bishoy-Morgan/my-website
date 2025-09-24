@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-// import Script from "next/script";
+import Script from "next/script";
 import "./globals.css";
 import localFont from "next/font/local";
 import { Playpen_Sans_Arabic } from "next/font/google";
@@ -47,19 +47,23 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  // Await the params promise
   const { locale } = await params;
-  
-  // Validate locale
+
   if (!locales.includes(locale)) {
     notFound();
   }
 
-  const messages = await getMessages({ locale });
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch {
+    notFound();
+  }
+
 
   return (
     <html lang={locale}>
-      {/* <head>
+      <head>
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
@@ -76,7 +80,7 @@ export default async function LocaleLayout({
             </Script>
           </>
         )}
-      </head> */}
+      </head>
       <body 
         dir={locale === "ar" ? "rtl" : "ltr"}
         className={

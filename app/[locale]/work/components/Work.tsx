@@ -16,7 +16,6 @@ import mapdxbDesktop from '@/public/images/projects/maps-desktop.png'
 import mapdxbMobile from '@/public/images/projects/maps-mockup.png'
 import schoolsphereDesktop from '@/public/images/projects/schoolsphere-desktop.png'
 import schoolsphereMobile from '@/public/images/projects/schoolsphere-mockup.png'
-// import TextTrail from '@/components/ui/TextTrail'
 import RedLines from '@/components/ui/RedLines'
 import { useTranslations } from 'next-intl'
 
@@ -102,16 +101,6 @@ const Work: React.FC = () => {
               viewport={{ once: true, amount: 0.5 }}
               variants={titleVariants}
             >
-              {/* <Suspense>
-                <TextTrail
-                  text={project.title}
-                  animateColor={true}
-                  colorCycleInterval={1500}
-                  noiseFactor={1.5}
-                  noiseScale={0.002}
-                  backgroundColor="transparent"
-                />
-              </Suspense> */}
               <h5 className='text-center text-8xl tracking-[-0.5rem] font-bold '>
                 {project.title}
               </h5>
