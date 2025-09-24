@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Suspense } from 'react';
 import { motion } from 'framer-motion'
 import Button from './ui/Button'
 import Beams from '@/public/models/Beams';
@@ -50,18 +49,16 @@ const HeroSection = () => {
                     viewport={{ once: true, margin: '200px' }}
                 >
                     {showBeams && (
-                        <Suspense>
-                            <Beams
-                                beamWidth={9}
-                                beamHeight={30}
-                                beamNumber={25}
-                                lightColor="#FF4533"
-                                speed={5}
-                                noiseIntensity={.85}
-                                scale={0.2}
-                                rotation={0}
-                            />
-                        </Suspense>
+                        <Beams
+                            beamWidth={9}
+                            beamHeight={30}
+                            beamNumber={25}
+                            lightColor="#FF4533"
+                            speed={5}
+                            noiseIntensity={.85}
+                            scale={0.2}
+                            rotation={0}
+                        />
                     )}
                     
                 </motion.div>
