@@ -87,7 +87,7 @@ const ContactForm: React.FC<Props> = ({ isOpen, onClose }) => {
                         <button
                         onClick={onClose}
                         aria-label="Close popup"
-                        className="absolute top-4 right-4 rounded-full bg-red md:bg-transparent md:hover:bg-red p-1"
+                        className="absolute top-4 right-4 rounded-full border-2 border-transparent bg-red hover:bg-transparent p-1 cursor-pointer hover:border-[#ff4533] transition-all duration-500 ease-in-out"
                         >
                             <Image 
                             src={closeIcon}

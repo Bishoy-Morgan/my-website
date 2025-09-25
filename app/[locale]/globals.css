@@ -15,7 +15,6 @@ body {
   font-family: var(--font-objectSans), sans-serif;
 }
 
-/* RTL locale support */
 [dir="rtl"] body {
   font-family: var(--font-playpenSansArabic), var(--font-objectSans), sans-serif;
 }
@@ -142,8 +141,8 @@ textarea::placeholder {
 
 input:focus,
 textarea:focus {
-  border-left-width: 4px;
-  box-shadow: 0 0 0 1px #ff4533;
+  border-left-width: 6px;
+  box-shadow: 0 0 0 1px rgba(255, 68, 51, 0.5);
 }
 
 /* Shiny Text Animation */
