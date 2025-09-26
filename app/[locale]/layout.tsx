@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import localFont from "next/font/local";
-import { Playpen_Sans_Arabic } from "next/font/google";
+// import { Playpen_Sans_Arabic } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import LinedBackground from "@/components/ui/LinedBackground";
 import { NextIntlClientProvider } from "next-intl";
@@ -26,12 +26,25 @@ const ObjectSans = localFont({
   preload: true
 });
 
-const playpenSansArabic = Playpen_Sans_Arabic({
-  subsets: ['arabic'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-playpenSansArabic',
+const PlaypenSansArabic = localFont({
+  src: [
+    {
+      path: './fonts/playpen-sans-arabic-arabic.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+
   display: 'swap',
+  preload: true
 });
+
+// const playpenSansArabic = Playpen_Sans_Arabic({
+//   subsets: ['arabic'],
+//   weight: ['400', '500', '600', '700', '800'],
+//   variable: '--font-playpenSansArabic',
+//   display: 'swap',
+// });
 
 export const metadata: Metadata = {
   title: "Bishoy Morgan | Freelance Web Developer",
@@ -79,7 +92,7 @@ export default async function LocaleLayout({
         dir={locale === "ar" ? "rtl" : "ltr"}
         className={
           locale === "ar"
-            ? `${playpenSansArabic.className} antialiased`
+            ? `${PlaypenSansArabic.className} antialiased`
             : `${ObjectSans.className} antialiased`
         }
       >
