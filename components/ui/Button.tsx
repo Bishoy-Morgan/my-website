@@ -27,7 +27,16 @@ const Button: React.FC<ButtonProps> = ({
         initial="rest"
         whileHover="hover"
         animate="rest"
-        className={`relative overflow-hidden text-white rounded-full px-[2vw] py-[2vw] md:py-[.8vw] text-button font-semibold flex items-center cursor-pointer ${locale === 'ar' ? 'mr-[0.5vw]' : 'ml-[0.5vw]'} ${className} `}
+        className={`
+            relative overflow-hidden text-white rounded-full 
+            px-[max(2vw,16px)] py-[max(2vw,12px)] 
+            md:py-[max(0.8vw,12px)] 
+            text-button font-semibold flex items-center cursor-pointer
+            min-h-[44px] min-w-[44px]
+            touch-manipulation
+            ${locale === 'ar' ? 'mr-[0.5vw]' : 'ml-[0.5vw]'} 
+            ${className}
+        `}
         {...props}
         >
             {/* Text content stays on top */}
