@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import localFont from "next/font/local";
-// import { Playpen_Sans_Arabic } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import LinedBackground from "@/components/ui/LinedBackground";
 import { NextIntlClientProvider } from "next-intl";
@@ -29,8 +28,13 @@ const ObjectSans = localFont({
 const PlaypenSansArabic = localFont({
   src: [
     {
-      path: './fonts/playpen-sans-arabic-arabic.woff2',
+      path: './fonts/playpen-sans-arabic-400.woff2',
       weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/playpen-sans-arabic-600.woff2',
+      weight: '600',
       style: 'normal',
     },
   ],
@@ -38,13 +42,6 @@ const PlaypenSansArabic = localFont({
   display: 'swap',
   preload: true
 });
-
-// const playpenSansArabic = Playpen_Sans_Arabic({
-//   subsets: ['arabic'],
-//   weight: ['400', '500', '600', '700', '800'],
-//   variable: '--font-playpenSansArabic',
-//   display: 'swap',
-// });
 
 export const metadata: Metadata = {
   title: "Bishoy Morgan | Freelance Web Developer",
