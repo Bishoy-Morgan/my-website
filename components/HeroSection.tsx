@@ -147,10 +147,10 @@ const HeroSection = () => {
                         whileTap={{ scale: 0.98 }}
                     >
                         <a
-                            href="https://cal.com/bishoy-morgan"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex justify-center"
+                        href="https://cal.com/bishoy-morgan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex justify-center"
                         >
                             <Button bgColor="#ff220e">
                                 {t("button")}

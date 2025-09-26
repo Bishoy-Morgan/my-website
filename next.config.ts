@@ -4,6 +4,15 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const nextConfig: NextConfig = {
     reactStrictMode: true,
     
+    experimental: {
+        optimizeCss: true, 
+        cssChunking: 'strict', 
+    },
+
+    ...(process.env.ANALYZE === 'true' && {
+        bundlePagesRouterDependencies: false,
+    }),
+    
     images: {
         formats: ['image/webp', 'image/avif'],
         deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -16,12 +25,6 @@ const nextConfig: NextConfig = {
     compiler: {
         removeConsole: process.env.NODE_ENV === 'production',
     },
-
-    ...(process.env.ANALYZE === 'true' && {
-        experimental: {
-            bundlePagesExternals: false,
-        },
-    }),
 
     async headers() {
         return [
@@ -43,6 +46,10 @@ const nextConfig: NextConfig = {
                     {
                         key: 'Referrer-Policy',
                         value: 'origin-when-cross-origin'
+                    },
+                    {
+                        key: 'Link',
+                        value: '</css/app.css>; rel=preload; as=style'
                     }
                 ]
             },
@@ -54,6 +61,19 @@ const nextConfig: NextConfig = {
                         value: 'public, max-age=31536000, immutable'
                     }
                 ]
+            },
+            {
+                source: '/_next/static/css/:path*',
+                headers: [
+                    {
+                        key: 'Cache-Control',
+                        value: 'public, max-age=31536000, immutable'
+                    },
+                    {
+                        key: 'Content-Type',
+                        value: 'text/css'
+                    }
+                ]
             }
         ]
     },
@@ -61,9 +81,10 @@ const nextConfig: NextConfig = {
 
     webpack: (config, { dev, isServer }) => {
         if (!dev && !isServer) {
-            // Split chunks for better caching
             config.optimization.splitChunks = {
                 chunks: 'all',
+                minSize: 20000,
+                maxSize: 244000,
                 cacheGroups: {
                     default: {
                         minChunks: 2,
@@ -76,8 +97,20 @@ const nextConfig: NextConfig = {
                         priority: -10,
                         chunks: 'all',
                     },
+                    // Separate CSS chunks
+                    styles: {
+                        name: 'styles',
+                        type: 'css/mini-extract',
+                        chunks: 'all',
+                        priority: 10,
+                        reuseExistingChunk: true,
+                        enforce: true,
+                    },
                 },
             }
+
+            config.optimization.usedExports = true
+            config.optimization.sideEffects = false
         }
 
         if (!dev) {

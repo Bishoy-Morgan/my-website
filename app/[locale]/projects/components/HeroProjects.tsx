@@ -101,9 +101,9 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
                         variants={fadeUp}
                     >
                         <a 
-                            href={project.link} 
-                            target='_blank' 
-                            rel="noopener noreferrer"
+                        href={project.link} 
+                        target='_blank' 
+                        rel="noopener noreferrer"
                         >
                             <Button bgColor='#ff4533'>
                                 {t("liveLink")}

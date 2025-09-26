@@ -114,10 +114,10 @@ const CoreCompetencies = () => {
 
             <div className="mt-16 text-center">
                 <a
-                    href="https://cal.com/bishoy-morgan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className='flex justify-center'
+                href="https://cal.com/bishoy-morgan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='flex justify-center'
                 >
                     <Button bgColor="#ff220e">
                         {t("book-call")}

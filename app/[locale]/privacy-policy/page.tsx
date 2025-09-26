@@ -104,8 +104,8 @@ export default function PrivacyPolicyPage() {
                         <p className="mt-3 text-paleWhite/50 ml-[5%] ">
                             {t('rights_footer')}{' '}
                             <a
-                                href={`mailto:${CONTACT_EMAIL}`}
-                                className={`${locale === 'ar' ? 'mr-1' : 'ml-1'} text-red tracking-wide hover:text-red transition-colors`}
+                            href={`mailto:${CONTACT_EMAIL}`}
+                            className={`${locale === 'ar' ? 'mr-1' : 'ml-1'} text-red tracking-wide hover:text-red transition-colors`}
                             >
                                 {CONTACT_EMAIL}
                             </a>
