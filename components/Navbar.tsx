@@ -38,14 +38,13 @@ const Navbar: React.FC = () => {
             >
                 <div className="flex items-center justify-center w-[10%] h-full ">
                     <Image
-                        src={morganLogo}
-                        alt="Morgan Logo"
-                        width={200}
-                        height={80}
-                        quality={75}
-                        loading='eager'
-                        sizes="(max-width: 768px) 40vw, 20vw"
-                        style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                    src={morganLogo}
+                    alt="Morgan Logo"
+                    width={200}
+                    height={80}
+                    quality={75}
+                    sizes="(max-width: 768px) 40vw, 20vw"
+                    style={{ objectFit: 'contain', width: '100%', height: '100%' }}
                     />
                 </div>
 
@@ -104,7 +103,7 @@ const Navbar: React.FC = () => {
                         alt="Morgan Logo"
                         width={120}
                         height={48}
-                        priority
+                        loading='eager'
                         quality={75}
                         sizes="40vw"
                         className="object-cover"
