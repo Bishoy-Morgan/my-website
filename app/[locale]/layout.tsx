@@ -120,8 +120,8 @@ export default async function LocaleLayout({
         dir={locale === "ar" ? "rtl" : "ltr"}
         className={
           locale === "ar"
-            ? `${PlaypenSansArabic.className} antialiased`
-            : `${ObjectSans.className} antialiased`
+            ? `${PlaypenSansArabic.variable} antialiased`
+            : `${ObjectSans.variable} antialiased`
         }
       >
         <NextIntlClientProvider locale={locale} messages={messages}>

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@font-face {
+/* @font-face {
   font-family: 'Object Sans';
   src: url('./fonts/ObjectSans.woff2') format('woff2');
   font-weight: 400;
@@ -30,7 +30,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 :root {
   --background: #020202;
@@ -44,11 +44,11 @@
 body {
   color: white;
   background: var(--background);
-  font-family: 'Object Sans', sans-serif;
+  font-family: var(--font-objectSans), sans-serif;
 }
 
 [dir="rtl"] body {
-  font-family: 'Playpen Sans Arabic', sans-serif;
+  font-family: var(--font-playpenSansArabic), sans-serif;
 }
 
 h1 {
