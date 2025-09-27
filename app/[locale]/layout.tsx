@@ -22,7 +22,6 @@ const ObjectSans = localFont({
     },
   ],
   display: 'swap',
-  preload: true
 });
 
 const PlaypenSansArabic = localFont({
@@ -40,7 +39,6 @@ const PlaypenSansArabic = localFont({
   ],
 
   display: 'swap',
-  preload: true
 });
 
 export const metadata: Metadata = {
