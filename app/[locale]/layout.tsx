@@ -75,7 +75,7 @@ export default async function LocaleLayout({
       <head>
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
 
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -97,7 +97,7 @@ export default async function LocaleLayout({
               })();
             `,
           }}
-        />
+        /> */}
 
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
