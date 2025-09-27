@@ -5,6 +5,7 @@ import Button from "@/components/ui/Button";
 import redArrow from '@/public/icons/long-redArrow.svg'
 import { motion, useAnimation, useInView, Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
+import RedLines from "./ui/RedLines";
 
 const containerVariant: Variants = {
     hidden: { opacity: 0, y: 20 },
@@ -31,9 +32,8 @@ const CTA = () => {
     }, [inView, controls]);
 
     return (
-        <div className="w-95 md:w-4/5 mx-auto flex flex-col mt-[10%]" ref={ref}>
-            {/* Top Red Line */}
-            <div className="w-1/2 py-10 border-r-2 border-red mb-16"></div>
+        <div className="relative w-95 md:w-4/5 mx-auto flex flex-col mt-[10%]" ref={ref}>
+            <RedLines lines={['center']} />
 
             {/* CTA Container */}
             <motion.div
@@ -74,11 +74,6 @@ const CTA = () => {
                     </motion.a>
                 </div>
             </motion.div>
-
-            {/* Bottom Red Lines */}
-            <div className="w-1/2 md:w-1/4 py-6 border-r-2 border-red mb-16 mt-8"></div>
-            <div className="w-full md:w-3/4 py-6 skew-y-12 md:skew-y-0 md:py-10 border-r-2 border-l-2 border-red mb-4"></div>
-            <div className="w-1/2 py-16 border-r-2 border-red"></div>
         </div>
     );
 };

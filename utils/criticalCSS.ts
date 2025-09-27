@@ -26,7 +26,7 @@ export const getCriticalCSS = (locale: string) => `
     }
     
     @font-face {
-        font-family: 'Object Sans Heavy';
+        font-family: 'Object Sans';
         src: url('/fonts/ObjectSans-Heavy.woff2') format('woff2');
         font-weight: 600;
         font-style: normal;

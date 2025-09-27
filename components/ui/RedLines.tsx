@@ -12,6 +12,7 @@ type LinePosition =
     | 'middleTopRight'
     | 'middleTopLeft'
     | 'bottomRight'
+    | 'center'
 
     type RedLinesProps = {
         lines: LinePosition[]
@@ -53,6 +54,10 @@ const lineStyles: Record<
     middleTopLeft: {
         className: 'top-[16%] left-0 w-1/2 md:w-1/4 border-r border-red',
         style: { height: '4%' },
+    },
+    center: {
+        className: 'top-[-10%] left-0 w-1/2 border-r border-red',
+        style: { height: '10%' },
     },
 }
 

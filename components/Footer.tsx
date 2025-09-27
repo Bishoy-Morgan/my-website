@@ -9,6 +9,7 @@ import linkedin from '@/public/icons/linkedin.svg'
 import whatsapp from '@/public/icons/whatsapp.svg'
 import { useLocale, useTranslations } from 'next-intl'
 import RedLines from './ui/RedLines'
+import { Center } from '@react-three/drei'
 
 const Footer = () => {
     const t = useTranslations("Footer")
@@ -24,7 +25,6 @@ const Footer = () => {
                 behavior: 'smooth'
             })
         }
-        // Otherwise, default Link behavior will navigate to home
     }
 
     const whatsappNumber = "201032700340";
@@ -35,9 +35,8 @@ const Footer = () => {
     return (
         <footer className='w-full flex justify-center py-16'>
             <div className='relative w-95 md:w-4/5 flex justify-between'>
-                <div className='absolute -z-10 top-0 left-0 w-full h-full hidden md:block'>
-                    <RedLines lines={['bottomRight', 'middleTopLeft' ]} />
-                </div>
+                <RedLines lines={['bottomRight', 'middleTopLeft', 'center', 'middleTopRight', 'middleRight'] } />
+                
                 <div className='w-1/2 md:w-1/4 py-16 px-2'>
                     <ul className='flex flex-col space-y-8'>
                         <Link 

@@ -4,11 +4,11 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-
 import blogsyDesktop from '@/public/images/projects/blogsy-desktop.png'
 import blogsyMobile from '@/public/images/projects/blogsy-mockup.png'
 import Button from './ui/Button'
 import { useTranslations } from 'next-intl'
+import RedLines from './ui/RedLines'
 
 const HighlightProject: React.FC = () => {
   const t = useTranslations('HighlightProject')
@@ -56,9 +56,7 @@ const HighlightProject: React.FC = () => {
           </motion.div>
 
           {/* Red lines */}
-          <div className="absolute -top-[20%] right-0 w-1/4 h-1/4 border-r border-red"></div>
-          <div className="absolute top-0 left-0 w-1/4 h-[5%] border-l border-red"></div>
-          <div className="absolute top-1/4 md:top-[18%] left-0 w-1/2 md:w-1/4 h-[2.5%] border-r border-red skew-y-12"></div>
+          <RedLines lines={['middleTopRight', 'bottomRight', 'bottomLeft', 'middleTopLeft']} />
 
           <motion.div
             className="relative group w-full flex flex-col justify-center items-center md:block h-[90vh] md:h-[80vh]"
@@ -110,7 +108,7 @@ const HighlightProject: React.FC = () => {
 
             {/* Mobile Image */}
             <motion.div
-              className="relative md:absolute right-0 bottom-[2.5%] w-[40%] md:w-[16%] z-20 rounded-[2.5rem] shadow-3xl "
+              className="relative md:!absolute right-0 bottom-[2.5%] w-[40%] md:w-[16%] z-20 rounded-[2.5rem] shadow-3xl "
               initial={{ x: -20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}

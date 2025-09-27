@@ -40,7 +40,6 @@ const PlaypenSansArabic = localFont({
       style: 'normal',
     },
   ],
-
   display: 'swap',
   preload: true,
   variable: '--font-playpenSansArabic',
@@ -58,16 +57,18 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale?: string }>; 
 }) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  
+  const locale = resolvedParams.locale || 'en';
 
-  if (!locales.includes(locale)) {
+  if (resolvedParams.locale && !locales.includes(resolvedParams.locale)) {
     notFound();
   }
 
   const messages = await getMessages({ locale });
-    const criticalCSS = getCriticalCSS(locale);
+  const criticalCSS = getCriticalCSS(locale);
 
   return (
     <html lang={locale}>
@@ -78,10 +79,9 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                // Method 1: Media switch technique
                 var link = document.createElement('link');
                 link.rel = 'stylesheet';
-                link.href = '/_next/static/css/app/layout.css'; // Your compiled CSS
+                link.href = '/_next/static/css/app/layout.css';
                 link.media = 'print';
                 link.onload = function() {
                   link.media = 'all';
@@ -89,7 +89,6 @@ export default async function LocaleLayout({
                 };
                 document.head.appendChild(link);
                 
-                // Fallback for older browsers
                 setTimeout(function() {
                   if (link.media === 'print') {
                     link.media = 'all';
