@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion, Variants } from 'framer-motion'
-
 import blogsyDesktop from '@/public/images/projects/blogsy-desktop.png'
 import legendDesktop from '@/public/images/projects/legend-desktop.png'
 import schoolsphereDesktop from '@/public/images/projects/schoolsphere-desktop.png'

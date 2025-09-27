@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-// import Script from "next/script";
-import "./globals.css";
+import Script from "next/script";
+import "./globals.css"; 
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import LinedBackground from "@/components/ui/LinedBackground";
@@ -67,7 +67,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      {/* <head>
+      <head>
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
@@ -84,7 +84,7 @@ export default async function LocaleLayout({
             </Script>
           </>
         )}
-      </head> */}
+      </head>
       <body 
         dir={locale === "ar" ? "rtl" : "ltr"}
         className={

@@ -36,7 +36,7 @@ const Footer = () => {
         <footer className='w-full flex justify-center py-16'>
             <div className='relative w-95 md:w-4/5 flex justify-between'>
                 <div className='absolute -z-10 top-0 left-0 w-full h-full hidden md:block'>
-                    <RedLines lines={['topRightHalf', 'bottomRight', 'middleTopLeft' ]} />
+                    <RedLines lines={['bottomRight', 'middleTopLeft' ]} />
                 </div>
                 <div className='w-1/2 md:w-1/4 py-16 px-2'>
                     <ul className='flex flex-col space-y-8'>
@@ -61,7 +61,11 @@ const Footer = () => {
 
                 <div className='w-1/2 md:w-1/4 py-16 flex flex-col justify-between'>
                     <div className='flex items-center justify-start space-x-8 pr-2 md:pr-0'>
-                        <Link href={`https://www.linkedin.com/in/bishoy-morgan-ba979a310`} target='_blank' className='navLinks'>
+                        <Link 
+                        href={`https://www.linkedin.com/in/bishoy-morgan-ba979a310`} 
+                        target='_blank' 
+                        className='navLinks'
+                        >
                             <Image 
                             src={linkedin}
                             alt='LinkedIn'
@@ -70,7 +74,11 @@ const Footer = () => {
                             className='icon-vw'
                             />
                         </Link>
-                        <Link href={`https://github.com/Bishoy-Morgan`} target='_blank' className='navLinks'>
+                        <Link 
+                        href={`https://github.com/Bishoy-Morgan`} 
+                        target='_blank' 
+                        className='navLinks'
+                        >
                             <Image 
                             src={github}
                             alt='GitHub'
@@ -95,7 +103,10 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className='px-2 flex flex-col gap-y-4 md:gap-y-0 md:flex-row justify-between mt-20 text-white/50'>
-                        <Link href={`/privacy-policy`} className='para-sm hover:text-white transition-all ease-in-out duration-300'>
+                        <Link 
+                        href={`/privacy-policy`} 
+                        className='para-sm hover:text-white transition-all ease-in-out duration-300'
+                        >
                             {t("privacyPolicy")}
                         </Link>
                         <span className='para-sm'>
