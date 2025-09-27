@@ -44,11 +44,11 @@
 body {
   color: white;
   background: var(--background);
-  font-family: var(--font-objectSans), sans-serif;
+  font-family: 'Object Sans', sans-serif;
 }
 
 [dir="rtl"] body {
-  font-family: var(--font-PlaypenSansArabic), var(--font-objectSans), sans-serif;
+  font-family: 'Playpen Sans Arabic', sans-serif;
 }
 
 h1 {

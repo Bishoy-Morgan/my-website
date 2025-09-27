@@ -23,6 +23,7 @@ const ObjectSans = localFont({
     },
   ],
   display: 'swap',
+  preload: true,
   variable: '--font-objectSans',
 });
 
@@ -41,6 +42,7 @@ const PlaypenSansArabic = localFont({
   ],
 
   display: 'swap',
+  preload: true,
   variable: '--font-playpenSansArabic',
 });
 
@@ -70,10 +72,8 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-        {/* ✅ Critical CSS - loads instantly */}
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-        
-        {/* ✅ Async CSS Loading for globals.css */}
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
