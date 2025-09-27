@@ -7,6 +7,7 @@ import LinedBackground from "@/components/ui/LinedBackground";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { getCriticalCSS } from "@/utils/criticalCSS";
 
 const ObjectSans = localFont({
   src: [
@@ -64,10 +65,41 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages({ locale });
+    const criticalCSS = getCriticalCSS(locale);
 
   return (
     <html lang={locale}>
       <head>
+        {/* ✅ Critical CSS - loads instantly */}
+        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
+        
+        {/* ✅ Async CSS Loading for globals.css */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Method 1: Media switch technique
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = '/_next/static/css/app/layout.css'; // Your compiled CSS
+                link.media = 'print';
+                link.onload = function() {
+                  link.media = 'all';
+                  document.documentElement.classList.add('css-loaded');
+                };
+                document.head.appendChild(link);
+                
+                // Fallback for older browsers
+                setTimeout(function() {
+                  if (link.media === 'print') {
+                    link.media = 'all';
+                  }
+                }, 500);
+              })();
+            `,
+          }}
+        />
+
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
