@@ -1,27 +1,7 @@
-import type { NextConfig } from 'next'
+import {NextConfig} from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-const nextConfig: NextConfig = {
-  experimental: {
-    optimizeCss: true,
-  },
-  images: {
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 31536000,
-  },
-  async headers() {
-    return [
-      {
-        source: '/_next/static/css/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
-  },
-  compress: true,
-}
+const nextConfig: NextConfig = {};
 
-export default nextConfig
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);
