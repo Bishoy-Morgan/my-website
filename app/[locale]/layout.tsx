@@ -74,31 +74,6 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <head>
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = '/_next/static/css/app/layout.css';
-                link.media = 'print';
-                link.onload = function() {
-                  link.media = 'all';
-                  document.documentElement.classList.add('css-loaded');
-                };
-                document.head.appendChild(link);
-                
-                setTimeout(function() {
-                  if (link.media === 'print') {
-                    link.media = 'all';
-                  }
-                }, 500);
-              })();
-            `,
-          }}
-        /> */}
-
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
@@ -120,7 +95,7 @@ export default async function LocaleLayout({
         dir={locale === "ar" ? "rtl" : "ltr"}
         className={
           locale === "ar"
-            ? `${PlaypenSansArabic.variable} antialiased`
+            ? `${PlaypenSansArabic.className} antialiased`
             : `${ObjectSans.variable} antialiased`
         }
       >
