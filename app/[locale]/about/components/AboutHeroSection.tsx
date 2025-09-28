@@ -9,7 +9,7 @@ const AboutHeroSection = () => {
     const t = useTranslations('AboutHeroSection')
 
     return (
-        <main className='relative w-95 md:w-4/5 mx-auto pt-[40%] md:pt-[10%] '>
+        <main className='relative w-95 md:w-4/5 mx-auto pt-[40%] md:pt-[16%] '>
             <RedLines lines={['middleLeft', 'middleTopRight', 'bottomRight']} />
             {/* Heading */}
             <motion.h1
@@ -35,7 +35,7 @@ const AboutHeroSection = () => {
                         {t('subtitle')}
                     </span>
                     <h3 
-                    className="text-white !font-bolder tracking-tighter mt-4 mb-6"
+                    className="text-white !font-bolder tracking-tighter my-[10%]"
                     >
                         {t("introTitle")}
                     </h3>

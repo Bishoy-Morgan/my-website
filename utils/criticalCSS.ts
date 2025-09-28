@@ -25,7 +25,6 @@ h1 {
     font-size: clamp(1.5vw, 6.5vw, 5.5vw);
     line-height: clamp(2vw, 7.5vw, 6vw);
     font-weight: 600;
-    margin: 0;
 }
 
 h2 {
@@ -33,7 +32,6 @@ h2 {
     line-height: clamp(1.8vw, 6vw, 4.8vw);
     color: var(--red);
     font-weight: 600;
-    margin: 0;
 }
 
 /* Critical mobile styles */
