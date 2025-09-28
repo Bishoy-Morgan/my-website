@@ -37,20 +37,32 @@ const Footer = () => {
                 <RedLines lines={['bottomRight', 'middleTopLeft', 'center', 'middleTopRight', 'middleRight'] } />
                 
                 <div className='w-1/2 md:w-1/4 py-16 px-2'>
-                    <ul className='flex flex-col space-y-8'>
-                        <Link 
-                            href={`/`} 
-                            onClick={handleHomeClick} 
-                            className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}
-                        >
-                            {s("home")}
-                        </Link>
-                        <Link href={`/about`} className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}>
-                            {s("about")}
-                        </Link>
-                        <Link href={`/work`} className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}>
-                            {s("work")}
-                        </Link>
+                    <ul className="flex flex-col space-y-8">
+                        <li>
+                            <Link 
+                                href={`/`} 
+                                onClick={handleHomeClick} 
+                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}
+                            >
+                                {s("home")}
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                href={`/about`} 
+                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}
+                            >
+                                {s("about")}
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                href={`/work`} 
+                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}
+                            >
+                                {s("work")}
+                            </Link>
+                        </li>
                     </ul>
                     <span className='block para-sm mt-20 text-white/50'>
                         {t("copyRights")}

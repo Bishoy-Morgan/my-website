@@ -74,13 +74,13 @@ const AboutHeroSection = () => {
     }, []);
 
     return (
-        <main className="relative w-95 md:w-4/5 mx-auto pt-[40%] md:pt-[16%] overflow-hidden">
+        <main className="relative w-95 md:w-4/5 mx-auto pt-[40%] md:pt-[12%] overflow-hidden">
             
             <RedLines lines={['bottomRight', 'middleRight', 'bottomLeft', 'middleTopLeft']} />
 
             {/* Heading */}
             <motion.h1
-                className="text-center mb-16"
+                className="text-center mb-16 max-w-xl mx-auto"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
