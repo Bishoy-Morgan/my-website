@@ -49,12 +49,12 @@ const CTA = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.6 }}
             >
-                <motion.h3
-                    className="text-white md:max-w-xl text-center"
+                <motion.h2
+                    className="text-white md:max-w-4xl text-center"
                     variants={fadeUpVariants}
                 >
                     {t("title")}
-                </motion.h3>
+                </motion.h2>
 
                 <motion.p
                     className="main-p mt-10 mb-16 text-center w-3/4 md:w-auto"
