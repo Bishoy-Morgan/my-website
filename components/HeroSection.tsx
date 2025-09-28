@@ -159,6 +159,7 @@ const HeroSection = () => {
                     </motion.div>
                 </motion.div>
 
+                {/* Beam background */}
                 <div
                     ref={observerRef}
                     className='black-gradient absolute top-0 left-0 w-full md:px-1 h-full -z-10 md:-z-50 opacity-40 md:opacity-100'
