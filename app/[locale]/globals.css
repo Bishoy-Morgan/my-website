@@ -173,7 +173,7 @@ textarea:focus {
 }
 
 @layer utilities {
-  .max-w-1920 { max-width: 1920px; }
+  /* .max-w-1920 { max-width: 1920px; }
   .w-95 { width: 95%; }
   .md\:w-full {
     @media (min-width: 768px) {
@@ -199,7 +199,7 @@ textarea:focus {
     @media (min-width: 768px) {
       width: 25%;
     }
-  }
+  } */
 
   /* Background Colors */
   .bg-background { background-color: var(--background); }

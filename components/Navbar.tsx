@@ -31,9 +31,9 @@ const Navbar: React.FC = () => {
         <>
             {/* Desktop Navbar */}
             <motion.div
-                initial={{ x: -20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
+                initial={{ y: -15, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
                 className="hidden md:flex absolute top-0 left-0 z-50 w-full h-[15%] items-center"
             >
                 <div className="flex items-center justify-center w-[10%] h-full ">
