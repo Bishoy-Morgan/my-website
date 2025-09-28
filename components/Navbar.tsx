@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
                 </div>
 
                 <nav className="w-4/5 mx-auto flex items-center justify-between">
-                    <ul className="w-1/4 flex items-center justify-between text-sm">
+                    <ul className="w-1/4 flex items-center justify-between px-2">
                         {navLinks.map(({ href, label }) => (
                             <li key={href}>
                                 <Link

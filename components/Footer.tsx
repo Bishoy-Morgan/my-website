@@ -9,7 +9,6 @@ import linkedin from '@/public/icons/linkedin.svg'
 import whatsapp from '@/public/icons/whatsapp.svg'
 import { useLocale, useTranslations } from 'next-intl'
 import RedLines from './ui/RedLines'
-import { Center } from '@react-three/drei'
 
 const Footer = () => {
     const t = useTranslations("Footer")

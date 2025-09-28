@@ -108,7 +108,7 @@ const ContactForm: React.FC<Props> = ({ isOpen, onClose }) => {
                                 </p>
                             )}
                             {status === 'error' && (
-                                <p className="text-darkRed text-sm text-center mt-2">
+                                <p className="text-red text-sm text-center mt-2">
                                     {t("failedMsg")}
                                 </p>
                             )}

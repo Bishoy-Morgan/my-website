@@ -49,9 +49,13 @@ const HighlightProject: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="font-bold shiny-text mb-8">{t('currentProject-name')}</h2>
-            <p className="mb-8 secondary-p text-paleWhite/80">{t('currentProject-des')}</p>
-            <Link href="/work">
-              <Button bgColor="#ff220e">{t('buttonA')}</Button>
+            <p className="my-8 secondary-p text-paleWhite/80">
+              {t('currentProject-des')}
+            </p>
+            <Link href="/work" className='mb-8'>
+              <Button bgColor="#ff220e">
+                {t('buttonA')}
+              </Button>
             </Link>
           </motion.div>
 
@@ -65,16 +69,17 @@ const HighlightProject: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 backdrop-blur-xs transition-all duration-300 ease-in-out flex flex-col items-center justify-center gap-y-10 z-30">
+            <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 backdrop-blur-xs transition-all duration-300 ease-in-out flex flex-col items-center justify-center gap-y-10 z-30 ">
               <a 
               href="https://blogsy-ceod.onrender.com" 
               target="_blank"
+              className='text-red'
               >
                 {/* Visit website */}
-                <h1 className="hidden md:block text-red tracking-[-0.5rem] md:hover:scale-125 transition-transform duration-300 ease-out">
+                <h1 className="hidden md:block tracking-[-0.5rem] md:hover:scale-110 transition-transform duration-300 ease-out">
                   {t('visitWebsite')}
                 </h1>
-                <h2 className="md:hidden text-red tracking-[-0.3rem] md:hover:scale-125 transition-transform duration-300 ease-out">
+                <h2 className="md:hidden tracking-[-0.3rem] md:hover:scale-110 transition-transform duration-300 ease-out">
                   {t('visitWebsite')}
                 </h2>
               </a>
@@ -108,7 +113,7 @@ const HighlightProject: React.FC = () => {
 
             {/* Mobile Image */}
             <motion.div
-              className="relative md:!absolute right-0 bottom-[2.5%] w-[40%] md:w-[16%] z-20 rounded-[2.5rem] shadow-3xl "
+              className="relative md:!absolute right-0 bottom-[2.5%] w-[40%] md:w-[16%] z-20 rounded-[2.5rem] shadow-3xl"
               initial={{ x: -20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -121,7 +126,7 @@ const HighlightProject: React.FC = () => {
                 height={382}
                 quality={75}
                 loading='eager'
-                sizes="(max-width: 640px) 50vw, (max-width: 768px) 200px, 189px"
+                sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, 40vw"
                 style={{ width: 'auto', height: 'auto', objectFit: 'cover', borderRadius: '2rem' }}
               />
             </motion.div>

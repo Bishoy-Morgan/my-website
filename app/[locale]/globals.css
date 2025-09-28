@@ -1,37 +1,5 @@
 @import "tailwindcss";
 
-/* @font-face {
-  font-family: 'Object Sans';
-  src: url('./fonts/ObjectSans.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-  
-@font-face {
-  font-family: 'Object Sans';
-  src: url('./fonts/ObjectSans-Heavy.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Playpen Sans Arabic';
-  src: url('./fonts/playpen-sans-arabic-400.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-  
-@font-face {
-  font-family: 'Playpen Sans Arabic';
-  src: url('./fonts/playpen-sans-arabic-600.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-} */
-
 :root {
   --background: #020202;
   --foreground: #ffffff;
@@ -55,7 +23,6 @@ h1 {
   font-size: clamp(1.5vw, 6.5vw, 5.5vw);
   line-height: clamp(2vw, 7.5vw, 6vw);
   font-weight: 600;
-  color: white;
 }
 
 h2 {
@@ -68,7 +35,6 @@ h2 {
 h3 {
   font-size: clamp(1vw, 3vw, 2.5vw);
   line-height: clamp(1.2vw, 4vw, 3vw);
-  color: white;
   font-weight: 600;
 }
 
@@ -211,27 +177,27 @@ textarea:focus {
   .w-95 { width: 95%; }
   .md\:w-full {
     @media (min-width: 768px) {
-      width: 100% !important;
+      width: 100%;
     }
   }
   .md\:w-4\/5 {
     @media (min-width: 768px) {
-      width: 80% !important;
+      width: 80%;
     }
   }
   .md\:w-1\/2 {
     @media (min-width: 768px) {
-      width: 50% !important;
+      width: 50%;
     }
   }
   .md\:w-1\/3 {
     @media (min-width: 768px) {
-      width: 33.333333% !important;
+      width: 33.333333%;
     }
   }
   .md\:w-1\/4 {
     @media (min-width: 768px) {
-      width: 25% !important;
+      width: 25%;
     }
   }
 
@@ -244,21 +210,13 @@ textarea:focus {
   .bg-darkRed { background-color: var(--darkRed); }
 
   /* Text Colors */
-  .text-background { color: var(--background); }
-  .text-foreground { color: var(--foreground); }
   .text-white { color: var(--white); }
   .text-paleWhite { color: var(--paleWhite); }
-  .text-red { color: var(--red) !important; }
-  .text-darkRed { color: var(--darkRed); }
+  .text-red { color: var(--red); }
   .text-button { font-size: clamp(0.8vw, 1vw, 1.2vw); }
 
   /* Borders */
-  .border-background { border-color: var(--background); }
-  .border-foreground { border-color: var(--foreground); }
-  .border-white { border-color: var(--white); }
-  .border-paleWhite { border-color: var(--paleWhite); }
   .border-red { border-color: var(--red) }
-  .border-darkRed { border-color: var(--darkRed); }
 }
 
 /* Mobile Layout */
