@@ -50,7 +50,7 @@ const CTA = () => {
                 viewport={{ once: true, amount: 0.6 }}
             >
                 <motion.h2
-                    className="text-white md:max-w-4xl text-center"
+                    className="text-white text-center md:max-w-4xl"
                     variants={fadeUpVariants}
                 >
                     {t("title")}

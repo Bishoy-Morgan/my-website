@@ -7,10 +7,52 @@
   --paleWhite: #EEEEEE;
   --red: #ff4533;
   --darkRed: #ff220e;
+  
+  /* Desktop clamp scales */
+  --h1-size: clamp(1.5vw, 6.5vw, 5.5vw);
+  --h1-line: clamp(2vw, 7.5vw, 6vw);
+  --h2-size: clamp(1.6vw, 5.7vw, 4.5vw);
+  --h2-line: clamp(1.8vw, 6vw, 4.8vw);
+  --h3-size: clamp(1vw, 3vw, 2.5vw);
+  --h3-line: clamp(1.2vw, 4vw, 3vw);
+  --p-main-size: clamp(0.5vw, 2vw, 1.5vw);
+  --p-main-line: clamp(0.8vw, 3vw, 2vw);
+  --p-secondary-size: clamp(0.8vw, 1.3vw, 1.5vw);
+  --p-secondary-line: clamp(1vw, 2vw, 2.2vw);
+  --p-sm-size: clamp(0.5vw, 2vw, 1vw);
+  --p-sm-line: clamp(0.8vw, 3vw, 1.5vw);
+  --nav-size: clamp(0.8vw, 1vw, 1.8vw);
+  --nav-line: clamp(1vw, 1.25vw, 2vw);
+  --icon-size: clamp(1vw, 1.5vw, 2.5vw);
+  --btn-size: clamp(0.8vw, 1vw, 1.2vw);
+  --circle-size: 3vw;
+}
+
+/* Mobile overrides - only need to change the variables */
+@media (max-width: 431px) {
+  :root {
+    --h1-size: clamp(14vw, 14.5vw, 14.5vw);
+    --h1-line: clamp(16vw, 16.5vw, 16.5vw);
+    --h2-size: clamp(12vw, 12.5vw, 12.5vw);
+    --h2-line: clamp(14vw, 14.5vw, 14.5vw);
+    --h3-size: clamp(10vw, 10.5vw, 10.5vw);
+    --h3-line: clamp(12vw, 12.5vw, 12.5vw);
+    --p-main-size: clamp(4vw, 4.5vw, 5vw);
+    --p-main-line: clamp(8vw, 8.3vw, 8.5vw);
+    --p-secondary-size: clamp(2.8vw, 3vw, 3vw);
+    --p-secondary-line: clamp(5.6vw, 5.8vw, 6vw);
+    --p-sm-size: clamp(2vw, 2.5vw, 3vw);
+    --p-sm-line: clamp(4vw, 4.5vw, 5vw);
+    --nav-size: clamp(5vw, 5.5vw, 6vw);
+    --nav-line: clamp(5vw, 5.25vw, 5.25vw);
+    --icon-size: clamp(10vw, 10.5vw, 11vw);
+    --btn-size: clamp(5vw, 5.5vw, 6vw);
+    --circle-size: 12vw;
+  }
 }
 
 body {
-  color: white;
+  color: var(--white);
   background: var(--background);
   font-family: var(--font-objectSans), sans-serif;
 }
@@ -19,48 +61,48 @@ body {
   font-family: var(--font-playpenSansArabic), sans-serif;
 }
 
+/* Typography - using CSS variables */
 h1 {
-  font-size: clamp(1.5vw, 6.5vw, 5.5vw);
-  line-height: clamp(2vw, 7.5vw, 6vw);
+  font-size: var(--h1-size);
+  line-height: var(--h1-line);
   font-weight: 600;
 }
 
 h2 {
-  font-size: clamp(1.6vw, 5.7vw, 4.5vw);
-  line-height: clamp(1.8vw, 6vw, 4.8vw);
+  font-size: var(--h2-size);
+  line-height: var(--h2-line);
   color: var(--red);
   font-weight: 600;
 }
 
 h3 {
-  font-size: clamp(1vw, 3vw, 2.5vw);
-  line-height: clamp(1.2vw, 4vw, 3vw);
+  font-size: var(--h3-size);
+  line-height: var(--h3-line);
   font-weight: 600;
 }
 
 .main-p {
-  font-size: clamp(0.5vw, 2vw, 1.5vw);
-  line-height: clamp(0.8vw, 3vw, 2vw);
+  font-size: var(--p-main-size);
+  line-height: var(--p-main-line);
 }
 
 .secondary-p {
-  font-size: clamp(0.8vw, 1.3vw, 1.5vw);
-  line-height: clamp(1vw, 2vw, 2.2vw);
+  font-size: var(--p-secondary-size);
+  line-height: var(--p-secondary-line);
 }
 
 .para-sm {
-  font-size: clamp(0.5vw, 2vw, 1vw);
-  line-height: clamp(0.8vw, 3vw, 1.5vw);
+  font-size: var(--p-sm-size);
+  line-height: var(--p-sm-line);
 }
 
-/* Navigation Links */
 .navLinks {
   position: relative;
   padding-left: 0.5rem;
   border-left: 2px solid transparent;
   transition: all 150ms ease-out;
-  font-size: clamp(0.8vw, 1vw, 1.8vw);
-  line-height: clamp(1vw, 1.25vw, 2vw);
+  font-size: var(--nav-size);
+  line-height: var(--nav-line);
 }
 
 .navLinks::before {
@@ -68,8 +110,8 @@ h3 {
   width: 80%;
   height: 100%;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   background: var(--darkRed);
   transform: skew(-20deg);
   z-index: -1;
@@ -79,6 +121,7 @@ h3 {
 
 [dir="rtl"] .navLinks::before {
   right: 0;
+  left: auto;
   transform: skew(20deg);
 }
 
@@ -90,17 +133,23 @@ h3 {
 
 [dir="rtl"] .navLinks:hover::before,
 [dir="rtl"] .navLinks.active::before {
-  opacity: 0.8;
   transform: translateX(-20%) skew(20deg);
 }
 
-/* Icons */
 .icon-vw {
-  width: clamp(1vw, 1.5vw, 2.5vw);
-  height: clamp(1vw, 1.5vw, 2.5vw);
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
-/* Gradient Effects */
+.text-button {
+  font-size: var(--btn-size);
+}
+
+.circle-size {
+  width: var(--circle-size);
+}
+
+/* Rest of your styles remain the same */
 .black-gradient::after {
   content: "";
   position: absolute;
@@ -114,19 +163,15 @@ h3 {
   background-image: linear-gradient(to top, #000000 30%, transparent);
 }
 
-/* Form Elements */
 input,
 textarea {
   width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
   background-color: transparent;
-  border-left: 2px solid #ff4533;
-  outline: none;             
+  border-left: 2px solid var(--red);
+  outline: none;
   transition: all 100ms ease-in-out;
 }
 
@@ -143,7 +188,6 @@ textarea:focus {
   box-shadow: 0 0 0 1px rgba(255, 68, 51, 0.5);
 }
 
-/* Shiny Text Animation */
 .shiny-text {
   color: rgba(255, 250, 240, 0.5);
   background: linear-gradient(
@@ -168,109 +212,15 @@ textarea:focus {
   100% { background-position: -100%; }
 }
 
-.circle-size {
-  --circle-size: 3vw;
-}
-
 @layer utilities {
-  /* .max-w-1920 { max-width: 1920px; }
-  .w-95 { width: 95%; }
-  .md\:w-full {
-    @media (min-width: 768px) {
-      width: 100%;
-    }
-  }
-  .md\:w-4\/5 {
-    @media (min-width: 768px) {
-      width: 80%;
-    }
-  }
-  .md\:w-1\/2 {
-    @media (min-width: 768px) {
-      width: 50%;
-    }
-  }
-  .md\:w-1\/3 {
-    @media (min-width: 768px) {
-      width: 33.333333%;
-    }
-  }
-  .md\:w-1\/4 {
-    @media (min-width: 768px) {
-      width: 25%;
-    }
-  } */
-
-  /* Background Colors */
   .bg-background { background-color: var(--background); }
   .bg-foreground { background-color: var(--foreground); }
   .bg-white { background-color: var(--white); }
   .bg-paleWhite { background-color: var(--paleWhite); }
   .bg-red { background-color: var(--red); }
   .bg-darkRed { background-color: var(--darkRed); }
-
-  /* Text Colors */
   .text-white { color: var(--white); }
   .text-paleWhite { color: var(--paleWhite); }
   .text-red { color: var(--red); }
-  .text-button { font-size: clamp(0.8vw, 1vw, 1.2vw); }
-
-  /* Borders */
-  .border-red { border-color: var(--red) }
-}
-
-/* Mobile Layout */
-@media (max-width: 431px) {
-  h1 {
-    font-size: clamp(14vw, 14.5vw, 14.5vw);
-    line-height: clamp(16vw, 16.5vw, 16.5vw);
-  }
-
-  h2 {
-    font-size: clamp(12vw, 12.5vw, 12.5vw);
-    line-height: clamp(14vw, 14.5vw, 14.5vw);
-  }
-
-  h3 {
-    font-size: clamp(10vw, 10.5vw, 10.5vw);
-    line-height: clamp(12vw, 12.5vw, 12.5vw);
-  }
-
-  h4 {
-    font-size: clamp(8vw, 8.5vw, 8.5vw);
-    line-height: clamp(10vw, 10.5vw, 10.5vw);
-  }
-
-  .main-p {
-    font-size: clamp(4vw, 4.5vw, 5vw);
-    line-height: clamp(8vw, 8.3vw, 8.5vw);
-  }
-
-  .secondary-p {
-    font-size: clamp(2.8vw, 3vw, 3vw);
-    line-height: clamp(5.6vw, 5.8vw, 6vw);
-  }
-
-  .para-sm {
-    font-size: clamp(2vw, 2.5vw, 3vw);
-    line-height: clamp(4vw, 4.5vw, 5vw);
-  }
-
-  .navLinks {
-    font-size: clamp(5vw, 5.5vw, 6vw);
-    line-height: clamp(5vw, 5.25vw, 5.25vw);
-  }
-
-  .icon-vw {
-    width: clamp(10vw, 10.5vw, 11vw);
-    height: clamp(10vw, 10.5vw, 11vw);
-  }
-
-  .text-button {
-    font-size: clamp(5vw, 5.5vw, 6vw);
-  }
-
-  .circle-size {
-    --circle-size: 12vw;
-  }
+  .border-red { border-color: var(--red); }
 }

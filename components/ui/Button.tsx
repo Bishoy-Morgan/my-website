@@ -40,8 +40,9 @@ const Button: React.FC<ButtonProps> = ({
         {...props}
         >
             {/* Text content stays on top */}
-            <span className="relative z-10">{children}</span>
-
+            <span className="relative z-10">
+                {children}
+            </span>
             {/* The long black arrow */}
             <motion.span
             className="relative z-10 text-white"

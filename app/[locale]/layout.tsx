@@ -25,6 +25,7 @@ const ObjectSans = localFont({
   display: 'swap',
   preload: true,
   variable: '--font-objectSans',
+  adjustFontFallback: 'Arial',
 });
 
 const PlaypenSansArabic = localFont({
@@ -43,6 +44,7 @@ const PlaypenSansArabic = localFont({
   display: 'swap',
   preload: true,
   variable: '--font-playpenSansArabic',
+  adjustFontFallback: 'Arial',
 });
 
 export const metadata: Metadata = {
@@ -73,7 +75,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
+        <style 
+          dangerouslySetInnerHTML={{ __html: criticalCSS }} 
+          data-critical="true"
+        />      
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
