@@ -1,5 +1,3 @@
-'use client'
-
 import AboutHeroSection from './components/AboutHeroSection'
 import JourneyTimeline from './components/JourneyTimeline'
 import Philosophy from './components/Philosophy'
@@ -9,12 +7,16 @@ import Footer from '@/components/Footer'
 
 export default function AboutPage() {
     return (
-        <main>
-            <AboutHeroSection />
-            <JourneyTimeline />
-            <Philosophy />
-            <CoreCompetencies />
-            <Footer />
-        </main>
+        <>
+            <main>
+                <AboutHeroSection />
+                <JourneyTimeline />
+                <Philosophy />
+                <CoreCompetencies />
+            </main>
+            <footer>
+                <Footer />
+            </footer>
+        </>
     )
 }

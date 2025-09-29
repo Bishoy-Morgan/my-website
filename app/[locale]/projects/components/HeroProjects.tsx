@@ -124,7 +124,7 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
                             alt={`${project.title} desktop`}
                             fill
                             priority
-                            quality={100}
+                            quality={75}
                             className="object-cover object-left-top"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
@@ -154,7 +154,7 @@ const HeroProjects: React.FC<HeroProjectsProps> = ({ project }) => {
                             alt={`${project.title} mobile`}
                             fill
                             priority
-                            quality={100}
+                            quality={75}
                             className="object-contain"
                             sizes="(max-width: 768px) 75vw, 50vw"
                         />

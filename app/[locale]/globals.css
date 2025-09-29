@@ -207,6 +207,36 @@ textarea:focus {
   animation: none;
 }
 
+.card-width {
+  width: 32vw;
+  min-width: 32vw;
+  max-width: 34vw;
+}
+
+@media (min-width: 1536px) {
+  .card-width {
+    width: 36vw;
+    min-width: 36vw;
+    max-width: 36vw;
+  }
+}
+
+@media (min-width: 1636px) {
+  .card-width {
+    width: 33vw;
+    min-width: 33vw;
+    max-width: 33vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .card-width {
+    width: 30vw;
+    min-width: 30vw;
+    max-width: 30vw;
+  }
+}
+
 @keyframes shine {
   0% { background-position: 100%; }
   100% { background-position: -100%; }

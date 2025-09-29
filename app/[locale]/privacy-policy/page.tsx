@@ -138,7 +138,9 @@ export default function PrivacyPolicyPage() {
                 </motion.div>
             </main>
 
-            <Footer />
+            <footer>
+                <Footer />
+            </footer>
         </>
     )
 }

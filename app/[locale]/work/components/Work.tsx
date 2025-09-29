@@ -108,9 +108,9 @@ const Work: React.FC = () => {
               className="hidden md:block project-title absolute top-[15%] left-0 md:left-1/2 md:-translate-x-1/2 w-full h-1/2 px-1 z-10"
               variants={itemVariants}
             >
-              <h5 className="text-center text-8xl text-red font-bold">
+              <h1 className="text-center text-red font-bold">
                 {project.title}
-              </h5>
+              </h1>
             </motion.div>
 
             <h1 className="md:hidden absolute top-[15%] left-1/2 -translate-x-1/2 w-full text-center z-10">
@@ -143,7 +143,7 @@ const Work: React.FC = () => {
                   width={1.78 * 430}
                   height={430}
                   priority={index < 2}
-                  quality={100}
+                  quality={75}
                   className="md:hidden w-full h-auto max-h-full object-cover object-left-top shadow-lg shadow-[#020202] rounded-b-sm"
                 />
                 <div className="absolute top-0 left-0 w-full h-full group-hover:backdrop-blur-xs transition duration-1000 flex items-center justify-center rounded-b-sm">

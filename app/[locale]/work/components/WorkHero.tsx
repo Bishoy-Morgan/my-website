@@ -70,7 +70,7 @@ const WorkHero = () => {
       <RedLines lines={['bottomLeft', 'middleTopRight', 'middleTopLeft']} className='hidden md:block'/>
       <RedLines lines={['bottomLeft', 'middleTopRight']} className='md:hidden'/>
       <motion.h1
-        className="mb-6 md:max-w-[50%] text-center px-4 !scale-90 md:!scale-100"
+        className="mb-6 md:max-w-[50%] text-center px-4 scale-90 md:scale-100"
         variants={itemVariants}
         initial="hidden"
         animate="visible"
@@ -78,16 +78,18 @@ const WorkHero = () => {
         {t('title')}
       </motion.h1>
 
-      <motion.p
-        className="main-p md:max-w-xl text-center text-paleWhite/80 my-4 px-4"
-        variants={itemVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {t('paragraph')}
-        <br className="hidden md:block"/>
-        {t('paragraphA')}
-      </motion.p>
+      <div className='w-1/2'>
+        <motion.p
+          className="main-p text-center text-paleWhite/80 my-4 px-4"
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {t('paragraph')}
+          <br className="hidden md:block"/>
+          {t('paragraphA')}
+        </motion.p>
+      </div>
 
       {/* Desktop Layout */}
       <motion.div
@@ -107,15 +109,15 @@ const WorkHero = () => {
             className='relative'
             >
               <div
-                className="relative rounded-sm transition-transform duration-500 ease-in-out cursor-pointer "
+                className={`
+                  relative rounded-sm transition-transform duration-500 ease-in-out cursor-pointer 
+                  card-width
+                `}
                 style={{
-                  width: '32vw', 
-                  aspectRatio: '5 / 3.5', 
+                  aspectRatio: '5 / 3.5',
                   transformOrigin: 'center',
-                  transform: `skewY(${skewAngle}deg) translateY(${isHovered ? -120 : 0}px)`,
+                  transform: `skewY(${skewAngle}deg) translateY(${isHovered ? -100 : 0}px)`,
                   zIndex: projects.length - index,
-                  minWidth: '32vw', 
-                  maxWidth: '34vw',
                   marginRight: index < projects.length - 1 ? `${cardGap}rem` : '0',
                 }}
                 onMouseEnter={() => setHoveredIndex(index)}
@@ -126,7 +128,7 @@ const WorkHero = () => {
                   alt={project.name}
                   fill
                   sizes="(min-width: 768px) 32vw, 0px"
-                  quality={100}
+                  quality={75}
                   priority={false}
                   loading='eager'
                   draggable={false}
