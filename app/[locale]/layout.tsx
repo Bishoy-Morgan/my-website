@@ -78,7 +78,8 @@ export default async function LocaleLayout({
         <style 
           dangerouslySetInnerHTML={{ __html: criticalCSS }} 
           data-critical="true"
-        />      
+        />
+        <link rel="preload" href="/_next/static/css/26d3d153ad28b5b7.css" as="style" />  
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
