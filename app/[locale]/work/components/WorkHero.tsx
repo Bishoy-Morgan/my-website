@@ -93,7 +93,7 @@ const WorkHero = () => {
 
       {/* Desktop Layout */}
       <motion.div
-        className="hidden md:flex relative w-full items-end justify-center px-4 min-h-[60vh] "
+        className="hidden md:flex relative w-full items-end justify-center px-4 min-h-[60vh]"
         style={{ perspective: '800px' }}
         variants={containerVariants}
         initial="hidden"
@@ -106,12 +106,12 @@ const WorkHero = () => {
             href={`/projects/${project.id}`} 
             key={project.id} 
             aria-label={project.name}
-            className='relative'
+            className='relative max-w-full'
             >
               <div
                 className={`
                   relative rounded-sm transition-transform duration-500 ease-in-out cursor-pointer 
-                  card-width
+                  custom-card
                 `}
                 style={{
                   aspectRatio: '5 / 3.5',
@@ -137,7 +137,6 @@ const WorkHero = () => {
                     objectFit: 'cover',
                     borderRadius: '0.25rem',
                   }}
-                  className='shadow-lg shadow-black'
                 />
               </div>
             </Link>
