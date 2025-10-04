@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
+import { notFound } from 'next/navigation'
 import HeroProjects from '@/app/[locale]/projects/components/HeroProjects'
 import Footer from '@/components/Footer'
 import { getProjectsData } from '@/lib/projectsData'
@@ -15,13 +16,7 @@ export default function ProjectsPage() {
     const project = projects.find(p => p.id === projectId)
 
     if (!project) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <p className="text-center mt-10 text-xl">
-                    {t('common.projectNotFound')}
-                </p>
-            </div>
-        )
+        notFound()
     }
 
     return (

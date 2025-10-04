@@ -19,24 +19,35 @@ const buttonHover: Variants = {
     },
 }
 
-const FallingSock = ({ delay }: { delay: number }) => (
-    <motion.div
-        className="absolute top-0 left-0 text-7xl"
-        initial={{ y: -100, x: Math.random() * window.innerWidth }}
-        animate={{ 
-            y: window.innerHeight + 100,
-            rotate: Math.random() * 360
-        }}
-        transition={{
-            delay,
-            duration: 3 + Math.random() * 2,
-            repeat: Infinity,
-            ease: "linear"
-        }}
-    >
-        🧦
-    </motion.div>
-)
+const FallingSock = ({ delay }: { delay: number }) => {
+    const [dimensions, setDimensions] = useState({ width: 1000, height: 1000 })
+
+    useEffect(() => {
+        setDimensions({
+            width: window.innerWidth,
+            height: window.innerHeight
+        })
+    }, [])
+
+    return (
+        <motion.div
+            className="absolute top-0 left-0 text-7xl"
+            initial={{ y: -100, x: Math.random() * dimensions.width }}
+            animate={{ 
+                y: dimensions.height + 100,
+                rotate: Math.random() * 360
+            }}
+            transition={{
+                delay,
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                ease: "linear"
+            }}
+        >
+            🧦
+        </motion.div>
+    )
+}
 
 export default function NotFound() {
     const t = useTranslations('OopsWrongTurn')
@@ -44,6 +55,7 @@ export default function NotFound() {
     const [showSecret, setShowSecret] = useState(false)
     const [sockCount] = useState(20)
     const [message, setMessage] = useState("Checking the void...")
+    const [mounted, setMounted] = useState(false)
 
     const funnyMessages = useMemo(() => [
         t("msg1"),
@@ -54,14 +66,18 @@ export default function NotFound() {
     ], [t])
 
     useEffect(() => {
+        setMounted(true)
         const randomMsg = funnyMessages[Math.floor(Math.random() * funnyMessages.length)]
         setMessage(randomMsg)
     }, [funnyMessages])
 
-
     const handleSecretClick = () => {
         setShowSecret(true)
         setTimeout(() => router.push('/'), 5000)
+    }
+
+    if (!mounted) {
+        return null
     }
 
     return (
@@ -119,7 +135,7 @@ export default function NotFound() {
                 <AnimatePresence>
                     {showSecret && (
                         <motion.div
-                            className="absolute top-0 left-0 w-full h-screen z-50 flex items-center justify-center bg-[#020202] "
+                            className="fixed top-0 left-0 w-full h-screen z-50 flex items-center justify-center bg-[#020202]"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -128,7 +144,7 @@ export default function NotFound() {
                                 <FallingSock key={i} delay={i * 0.2} />
                             ))}
                             <motion.h1 
-                            className="text-white text-center px-4"
+                            className="text-white text-center px-4 z-10"
                             initial={{ scale: 0.8 }}
                             animate={{ scale: 1 }}
                             transition={{ type: 'spring', stiffness: 100 }}

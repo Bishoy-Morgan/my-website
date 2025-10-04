@@ -17,7 +17,7 @@ const Footer = () => {
     const pathname = usePathname()
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        if (pathname === '/') {
+        if (pathname === `/${locale}` || pathname === `/${locale}/`) {
             e.preventDefault()
             window.scrollTo({
                 top: 0,
@@ -40,25 +40,25 @@ const Footer = () => {
                     <ul className="flex flex-col space-y-8">
                         <li>
                             <Link 
-                                href={`/`} 
+                                href={`/${locale}`} 
                                 onClick={handleHomeClick} 
-                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}
+                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} inline-block text-white/50 hover:text-white transition-all duration-150 ease-linear`}
                             >
                                 {s("home")}
                             </Link>
                         </li>
                         <li>
                             <Link 
-                                href={`/about`} 
-                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}
+                                href={`/${locale}/about`} 
+                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} inline-block text-white/50 hover:text-white transition-all duration-150 ease-linear`}
                             >
                                 {s("about")}
                             </Link>
                         </li>
                         <li>
                             <Link 
-                                href={`/work`} 
-                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} text-white/50 hover:text-white transition-all duration-150 ease-linear`}
+                                href={`/${locale}/work`} 
+                                className={`${locale === 'ar' ? 'hover:-translate-x-2' : 'hover:translate-x-2'} inline-block text-white/50 hover:text-white transition-all duration-150 ease-linear`}
                             >
                                 {s("work")}
                             </Link>
@@ -114,7 +114,7 @@ const Footer = () => {
                     </div>
                     <div className='px-2 flex flex-col gap-y-4 md:gap-y-0 md:flex-row justify-between mt-20 text-white/50'>
                         <Link 
-                        href={`/privacy-policy`} 
+                        href={`/${locale}/privacy-policy`} 
                         className='para-sm hover:text-white transition-all ease-in-out duration-300'
                         >
                             {t("privacyPolicy")}

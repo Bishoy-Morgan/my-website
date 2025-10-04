@@ -17,7 +17,7 @@ import mapdxbMobile from '@/public/images/projects/maps-mockup.png'
 import schoolsphereDesktop from '@/public/images/projects/schoolsphere-desktop.png'
 import schoolsphereMobile from '@/public/images/projects/schoolsphere-mockup.png'
 import RedLines from '@/components/ui/RedLines'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 const projects = [
   {
@@ -82,6 +82,7 @@ const itemVariants: Variants = {
 }
 
 const Work: React.FC = () => {
+  const locale = useLocale()
   const t = useTranslations('WorkHero')
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
 
@@ -119,7 +120,7 @@ const Work: React.FC = () => {
 
             {/* Desktop Image */}
             <Link
-              href={`/projects/${project.id}`}
+              href={`/${locale}/projects/${project.id}`}
               className="relative group w-full px-2 md:w-3/4 md:h-[60%] z-20 project-desktop"
             >
               <motion.div variants={itemVariants} className="relative w-full h-full">
@@ -160,7 +161,7 @@ const Work: React.FC = () => {
 
             {/* Mobile Image */}
             <Link
-              href={`/projects/${project.id}`}
+              href={`/${locale}/projects/${project.id}`}
               className="relative group w-1/2 md:w-1/5 mt-8 md:mt-0 h-3/4 project-mobile rounded-t-xl z-20 md:mr-[2.5%]"
             >
               <motion.div variants={itemVariants} className="relative w-full h-full">

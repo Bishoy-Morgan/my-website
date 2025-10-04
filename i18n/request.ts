@@ -1,5 +1,5 @@
-import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
+import { redirect } from 'next/navigation';
 
 const locales = ['en', 'es', 'ar'];
 
@@ -7,7 +7,7 @@ export default getRequestConfig(async ({ locale }) => {
     const currentLocale = locale || 'en';
 
     if (!locales.includes(currentLocale)) {
-        notFound();
+        redirect('/oops-wrong-turn');
     }
 
     try {
@@ -17,6 +17,6 @@ export default getRequestConfig(async ({ locale }) => {
             messages
         };
     } catch {
-        notFound();
+        redirect('/oops-wrong-turn');
     }
 });
