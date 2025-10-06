@@ -1,4 +1,3 @@
-// middleware.ts
 import { NextRequest, NextResponse, userAgent } from "next/server";
 import createMiddleware from "next-intl/middleware";
 
@@ -10,12 +9,9 @@ const intlMiddleware = createMiddleware({
 export function middleware(req: NextRequest): NextResponse {
   const { pathname } = req.nextUrl;
   
-  // Extract locale from pathname
   const pathnameLocale = pathname.split('/')[1];
   const locale = ['en', 'ar', 'es'].includes(pathnameLocale) ? pathnameLocale : 'en';
 
-  // Check if the path exists (basic validation)
-  // Add your valid routes here
   const validRoutes = [
     '/',
     '/about',
@@ -25,13 +21,10 @@ export function middleware(req: NextRequest): NextResponse {
     '/oops-wrong-turn',
   ];
 
-  // Remove locale from pathname for checking
   const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
   
-  // Check if it's a dynamic route like /projects/[id]
   const isDynamicProjectRoute = /^\/projects\/\d+$/.test(pathWithoutLocale);
   
-  // If it's not a valid route and not a dynamic route, redirect to error page
   const isValidRoute = validRoutes.some(route => 
     pathWithoutLocale === route || pathWithoutLocale.startsWith(route + '/')
   );

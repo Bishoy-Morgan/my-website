@@ -1,13 +1,19 @@
 import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin'
+import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig: NextConfig = {
   serverExternalPackages: [],
   experimental: {
     optimizePackageImports: [
       'framer-motion',
-      'lodash',
-      'date-fns'
+      '@react-three/fiber',
+      '@react-three/drei',
+      'three',
+      '@emailjs/browser',
+      'next-intl',
+      'react',
+      'react-dom'
     ],
     optimizeCss: true,
   },
@@ -92,6 +98,16 @@ const nextConfig: NextConfig = {
   },
 }
 
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
-export default withNextIntl(nextConfig)
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+
+const withAnalyzer = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+const config =
+  process.env.ANALYZE === 'true'
+    ? withAnalyzer(withNextIntl(nextConfig))
+    : withNextIntl(nextConfig);
+
+export default config;
