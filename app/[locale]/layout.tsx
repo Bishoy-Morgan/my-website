@@ -7,7 +7,7 @@ import LinedBackground from "@/components/ui/LinedBackground";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { getCriticalCSS } from "@/utils/criticalCSS";
+// import { getCriticalCSS } from "@/utils/criticalCSS";
 
 const ObjectSans = localFont({
   src: [
@@ -70,16 +70,16 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages({ locale });
-  const criticalCSS = getCriticalCSS(locale);
+  // const criticalCSS = getCriticalCSS(locale);
 
   return (
     <html lang={locale}>
       <head>
-        <style
+        {/* <style
           id="critical-css"
           dangerouslySetInnerHTML={{ __html: criticalCSS }} 
           data-critical="true"
-        />
+        /> */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
