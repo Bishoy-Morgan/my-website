@@ -80,7 +80,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: criticalCSS }} 
           data-critical="true"
         /> */}
-        {process.env.NEXT_PUBLIC_GA_ID && (
+        {/* {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -95,7 +95,7 @@ export default async function LocaleLayout({
               `}
             </Script>
           </>
-        )}
+        )} */}
       </head>
       <body 
         dir={locale === "ar" ? "rtl" : "ltr"}
