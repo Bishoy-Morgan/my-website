@@ -60,7 +60,7 @@ const HighlightProject: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           variants={containerVariants}
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.4 }}
         >
           <motion.div
             className="w-4/5 md:w-1/2 flex flex-col text-center items-center justify-center"

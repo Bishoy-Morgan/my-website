@@ -19,7 +19,6 @@ const Philosophy: React.FC = () => {
         []
     )
 
-  // Item animation (fade + slide-up + ease curve)
     const itemVariants: Variants = useMemo(
         () => ({
                 hidden: { opacity: 0, y: 30, scale: 0.95 },
@@ -45,7 +44,7 @@ const ParagraphColumn: React.FC<{
     spanClassName?: string
 }> = ({ paragraphKeys, className = '', spanClassName = '' }) => (
     <motion.p
-        className={`w-full md:w-1/2 h-full main-p flex flex-col items-start justify-between gap-y-10 md:gap-y-0 text-paleWhite/80 ${className}`}
+        className={`w-full md:w-1/2 h-full secondary-p flex flex-col items-start justify-between md:justify-evenly gap-y-10 md:gap-y-0 text-paleWhite/80 ${className}`}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

@@ -24,15 +24,17 @@ const CoreCompetencies = () => {
     }
 
     const skills = [
-        { name: t('js-ts'), level: 96 },
-        { name: t('react-next'), level: 98 },
-        { name: t('python'), level: 84 },
+        { name: t('javascript-typescript'), level: 96 },
+        { name: t('react-nextjs'), level: 98 },
+        { name: t('python-flask'), level: 84 },
         { name: t('tailwind-bootstrap'), level: 99 },
         { name: t('performance-optimization'), level: 92 },
         { name: t('graphql-rest-apis'), level: 87 },
         { name: t('multilingual-web-development'), level: 99 },
-        { name: t('performance-analytics'), level: 88 },
-    ]
+        { name: t('web-analytics-seo'), level: 88 },
+        { name: t('mongodb-mongoose'), level: 85 },
+        { name: t('mysql-sqlite'), level: 83 }
+    ];
 
     return (
         <section className="w-95 md:w-4/5 mx-auto py-20">

@@ -58,8 +58,8 @@
         "title": "Backstage Pass",
         "subtitle": "Looks like you’re curious about who’s running the show behind the screen",
         "introTitle": "let me introduce myself",
-        "paragraph": "I’m the person quietly pulling the levers, tweaking the lights, and making sure every scene flows just right. My stage is made of code, my props are pixels, and my goal is to make the audience — your users — walk away impressed without ever seeing the work it took to get there.",
-        "paragraphA": "I’m the person quietly pulling the levers, tweaking the lights, and making sure every scene flows just right. My stage is made of code, my props are pixels, and my goal is to make the audience — your users — walk away impressed without ever seeing the work it took to get there."
+        "paragraph": "I am a dedicated full-stack developer with over two years of experience specializing in frontend development, performance optimization, and multilingual web applications. My technical expertise spans modern JavaScript frameworks such as React and Next.js, alongside backend technologies including Node.js, Python Flask, and databases like MongoDB and SQLite. I focus on building scalable, responsive, and user-centric digital experiences that boost engagement and accessibility. Throughout my career, I have contributed to startups and mid-sized companies by developing applications that exceed performance expectations, improve user retention, and deliver seamless multilingual support.",
+        "paragraphA": "My projects showcase a strong commitment to quality and innovative problem-solving, from creating complex blogging platforms to leading full-stack development of multilingual service websites. I bring a collaborative spirit, working closely with designers and developers to create visually appealing and technically robust solutions. With a background in geophysics and an ongoing passion for learning both technical and language skills, I’m excited to continue advancing my craft and contributing to impactful technology projects in dynamic environments."
     },
     "JourneyTimeline": {
         "spring": "Spring ",
@@ -90,14 +90,16 @@
     },
     "CoreCompetencies": {
         "title": "Core Competencies",
-        "js-ts": "JavaScript / TypeScript",
-        "react-next": "React.js / Next.js",
-        "python": "Python",
+        "javascript-typescript": "JavaScript / TypeScript",
+        "react-nextjs": "React.js / Next.js",
+        "python-flask": "Python / Flask",
         "tailwind-bootstrap": "Tailwind CSS / Bootstrap",
         "performance-optimization": "Performance Optimization",
         "graphql-rest-apis": "GraphQL / REST APIs",
         "multilingual-web-development": "Multilingual Web Development",
-        "performance-analytics": "Web Performance Monitoring & Analytics",
+        "web-analytics-seo": "Web Analytics & SEO",
+        "mongodb-mongoose": "MongoDB / Mongoose",
+        "mysql-sqlite": "MySQL / SQLite",
         "book-call": "Book a Free Discovery Call"
     },
     "WorkHero": {
