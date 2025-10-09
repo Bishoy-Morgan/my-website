@@ -56,6 +56,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="" />
+        
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <Script
             id="gtm-init"
