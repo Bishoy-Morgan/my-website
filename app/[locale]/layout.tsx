@@ -56,7 +56,20 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-        <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
+          <link
+            rel="preload"
+            href="/fonts/ObjectSans.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/ObjectSans-Heavy.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="" />
         
