@@ -103,7 +103,8 @@ const Navbar: React.FC = () => {
                         alt="Morgan Logo"
                         width={120}
                         height={48}
-                        loading='eager'
+                        priority
+                        fetchPriority="high"
                         quality={75}
                         sizes="40vw"
                         className="object-cover"
