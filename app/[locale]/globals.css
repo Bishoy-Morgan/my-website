@@ -28,6 +28,28 @@
   --circle-size: 3rem;
 }
 
+/* Mobile overrides - Move to top for better cascade */
+@media (max-width: 431px) {
+  :root {
+    --h1-size: 3.5rem;
+    --h1-line: 4rem;
+    --h2-size: 3rem;
+    --h2-line: 3.5rem;
+    --h3-size: 2.5rem;
+    --h3-line: 3rem;
+    --p-main-size: 1.125rem;
+    --p-main-line: 2rem;
+    --p-secondary-size: 0.75rem;
+    --p-secondary-line: 1.5rem;
+    --p-sm-size: 0.625rem;
+    --p-sm-line: 1.125rem;
+    --nav-size: 1.375rem;
+    --nav-line: 1.375rem;
+    --icon-size: 2.625rem;
+    --btn-size: 1.375rem;
+  }
+}
+
 @media (min-width: 1280px) {
   :root {
     --h1-size: 5.5rem;
@@ -42,11 +64,7 @@
     --p-secondary-line: 1.75rem;
     --p-sm-size: 1rem;
     --p-sm-line: 1.5rem;
-    --nav-size: 1rem;
-    --nav-line: 1.375rem;
-    --icon-size: 1.5rem;
     --btn-size: 1.125rem;
-    --circle-size: 3rem;
   }
 }
 
@@ -72,29 +90,7 @@
   }
 }
 
-/* Mobile overrides */
-@media (max-width: 431px) {
-  :root {
-    --h1-size: 3.5rem;
-    --h1-line: 4rem;
-    --h2-size: 3rem;
-    --h2-line: 3.5rem;
-    --h3-size: 2.5rem;
-    --h3-line: 3rem;
-    --p-main-size: 1.125rem;
-    --p-main-line: 2rem;
-    --p-secondary-size: 0.75rem;
-    --p-secondary-line: 1.5rem;
-    --p-sm-size: 0.625rem;
-    --p-sm-line: 1.125rem;
-    --nav-size: 1.375rem;
-    --nav-line: 1.375rem;
-    --icon-size: 2.625rem;
-    --btn-size: 1.375rem;
-    --circle-size: 3rem;
-  }
-}
-
+/* Base styles */
 body {
   color: var(--white);
   background: var(--background);
@@ -105,6 +101,7 @@ body {
   font-family: var(--font-playpenSansArabic), sans-serif;
 }
 
+/* Typography */
 h1 {
   font-size: var(--h1-size);
   line-height: var(--h1-line);
@@ -139,27 +136,28 @@ h3 {
   line-height: var(--p-sm-line);
 }
 
+/* Navigation */
 .navLinks {
   position: relative;
   padding-left: 0.5rem;
   border-left: 2px solid transparent;
-  transition: all 150ms ease-out;
   font-size: var(--nav-size);
   line-height: var(--nav-line);
+  transition: all 150ms ease-out;
 }
 
 .navLinks::before {
   content: '';
-  width: 80%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 80%;
+  height: 100%;
   background: var(--darkRed);
   transform: skew(-20deg);
-  z-index: -1;
   opacity: 0;
-  transition: all .5s ease-out;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  z-index: -1;
 }
 
 [dir="rtl"] .navLinks::before {
@@ -179,6 +177,7 @@ h3 {
   transform: translateX(-20%) skew(20deg);
 }
 
+/* Utilities */
 .icon-vw {
   width: var(--icon-size);
   height: var(--icon-size);
@@ -192,30 +191,29 @@ h3 {
   width: var(--circle-size);
 }
 
-/* Rest of your styles remain the same */
 .black-gradient::after {
   content: "";
   position: absolute;
   inset: 0;
+  background: linear-gradient(to top, var(--background) 0%, transparent 5%);
   pointer-events: none;
   z-index: 10;
-  background: linear-gradient(to top, #020202 0%, transparent 20%);
 }
 
 .black-gradient-color {
-  background-image: linear-gradient(to top, #000000 30%, transparent);
+  background-image: linear-gradient(to top, #000 30%, transparent);
 }
 
+/* Forms */
 input,
 textarea {
   width: 100%;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 1rem;
   padding: 0.5rem 0.75rem;
   background-color: transparent;
   border-left: 2px solid var(--red);
   outline: none;
-  transition: all 100ms ease-in-out;
+  transition: border-left-width 100ms ease-in-out, box-shadow 100ms ease-in-out;
 }
 
 input::placeholder,
@@ -231,6 +229,7 @@ textarea:focus {
   box-shadow: 0 0 0 1px rgba(255, 68, 51, 0.5);
 }
 
+/* Animations */
 .shiny-text {
   color: rgba(255, 250, 240, 0.5);
   background: linear-gradient(
@@ -240,78 +239,54 @@ textarea:focus {
     rgba(255, 255, 255, 0) 60%
   );
   background-size: 200% 100%;
-  -webkit-background-clip: text;
   background-clip: text;
-  display: inline-block;
+  -webkit-background-clip: text;
   animation: shine 5s linear infinite;
+  display: inline-block;
 }
 
 .shiny-text.disabled {
   animation: none;
 }
 
+@keyframes shine {
+  to { background-position: -100%; }
+}
+
+/* Cards */
 .custom-card {
   width: 32vw;
   min-width: 32vw;
   max-width: 34vw;
-  -webkit-box-shadow: 14px 3px 40px 5px var(--background); 
   box-shadow: 14px 3px 40px 5px var(--background);
 }
 
 @media (min-width: 780px) and (max-width: 1179px) {
-  .custom-card {
-    width: 30vw;
-    min-width: 30vw;
-    max-width: 30vw;
-  }
+  .custom-card { width: 30vw; min-width: 30vw; max-width: 30vw; }
 }
 
 @media (min-width: 1180px) and (max-width: 1535px) {
-  .custom-card {
-    width: 38vw;
-    min-width: 38vw;
-    max-width: 38vw;
-  }
+  .custom-card { width: 38vw; min-width: 38vw; max-width: 38vw; }
 }
 
 @media (min-width: 1536px) {
-  .custom-card {
-    width: 36vw;
-    min-width: 36vw;
-    max-width: 36vw;
-  }
+  .custom-card { width: 36vw; min-width: 36vw; max-width: 36vw; }
 }
 
 @media (min-width: 1636px) {
-  .custom-card {
-    width: 33vw;
-    min-width: 33vw;
-    max-width: 33vw;
-  }
+  .custom-card { width: 33vw; min-width: 33vw; max-width: 33vw; }
 }
 
 @media (min-width: 1920px) {
-  .custom-card {
-    width: 30vw;
-    min-width: 30vw;
-    max-width: 30vw;
-  }
+  .custom-card { width: 30vw; min-width: 30vw; max-width: 30vw; }
 }
 
-@keyframes shine {
-  0% { background-position: 100%; }
-  100% { background-position: -100%; }
-}
-
+/* Tailwind layer utilities - Only include what Tailwind doesn't provide */
 @layer utilities {
   .bg-background { background-color: var(--background); }
-  .bg-foreground { background-color: var(--foreground); }
-  .bg-white { background-color: var(--white); }
   .bg-paleWhite { background-color: var(--paleWhite); }
   .bg-red { background-color: var(--red); }
   .bg-darkRed { background-color: var(--darkRed); }
-  .text-white { color: var(--white); }
   .text-paleWhite { color: var(--paleWhite); }
-  .text-red { color: var(--red); }
   .border-red { border-color: var(--red); }
 }

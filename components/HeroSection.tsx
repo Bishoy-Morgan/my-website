@@ -31,8 +31,8 @@ const HeroSection = () => {
         beamHeight: 30,
         beamNumber: 25,
         lightColor: "#FF4533",
-        speed: 5,
-        noiseIntensity: 0.85,
+        speed: 10,
+        noiseIntensity: .85,
         scale: 0.2,
         rotation: 0
     }), []);
