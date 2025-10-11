@@ -10,8 +10,8 @@ import { notFound } from "next/navigation";
 
 const ObjectSans = localFont({
   src: [
-    { path: './fonts/ObjectSans.woff2', weight: '400', style: 'normal' },
-    { path: './fonts/ObjectSans-Heavy.woff2', weight: '600', style: 'normal' },
+    { path: '../../public/fonts/ObjectSans.woff2', weight: '400', style: 'normal' },
+    { path: '../../public/fonts/ObjectSans-Heavy.woff2', weight: '600', style: 'normal' },
   ],
   display: 'swap',
   preload: true,
@@ -21,8 +21,8 @@ const ObjectSans = localFont({
 
 const PlaypenSansArabic = localFont({
   src: [
-    { path: './fonts/playpen-sans-arabic-400.woff2', weight: '400', style: 'normal' },
-    { path: './fonts/playpen-sans-arabic-600.woff2', weight: '600', style: 'normal' },
+    { path: '../../public/fonts/playpen-sans-arabic-400.woff2', weight: '400', style: 'normal' },
+    { path: '../../public/fonts/playpen-sans-arabic-600.woff2', weight: '600', style: 'normal' },
   ],
   display: 'swap',
   preload: true,
