@@ -58,14 +58,14 @@ export default async function LocaleLayout({
       <head>
           <link
             rel="preload"
-            href="/fonts/ObjectSans.woff2"
+            href="./fonts/ObjectSans.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/fonts/ObjectSans-Heavy.woff2"
+            href="./fonts/ObjectSans-Heavy.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
