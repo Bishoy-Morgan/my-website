@@ -116,7 +116,7 @@ const HighlightProject: React.FC = () => {
                 width={1200}
                 height={800}
                 quality={75}
-                priority={true}
+                loading='lazy'
                 placeholder="blur"
                 sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 76vw, 960px"
                 className="shadow-2xl"
