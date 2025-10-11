@@ -42,6 +42,8 @@ const Navbar: React.FC = () => {
                     alt="Morgan Logo"
                     width={200}
                     height={80}
+                    priority
+                    fetchPriority="high"
                     quality={75}
                     sizes="(max-width: 768px) 40vw, 20vw"
                     style={{ objectFit: 'contain', width: '100%', height: '100%' }}
