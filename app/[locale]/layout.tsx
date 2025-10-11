@@ -58,15 +58,15 @@ export default async function LocaleLayout({
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="" />
-        <link rel="preconnect" href="https://vercel.app" />
+        {/* <link rel="preconnect" href="https://vercel.app" />
         <link rel="preconnect" href="https://cal.com" />
         <link rel="dns-prefetch" href="https://vercel.app" />
-        <link rel="dns-prefetch" href="https://cal.com" />
-        <link
+        <link rel="dns-prefetch" href="https://cal.com" /> */}
+        {/* <link
           rel="preload"
           href="/_next/static/css/cf50174e65d8d1b3.css"
           as="style"
-        />
+        /> */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <Script
             id="gtm-init"

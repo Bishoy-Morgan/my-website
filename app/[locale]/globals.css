@@ -191,7 +191,7 @@ h3 {
   width: var(--circle-size);
 }
 
-.red-glow::after {
+/* .red-glow::after {
   content: '';
   position: absolute;
   top: 70%;
@@ -238,7 +238,7 @@ h3 {
   height: 100%;
   background-image: linear-gradient(to top, var(--background) 10%, transparent 90%);
   z-index: -1;
-}
+} */
 
 /* Forms */
 input,

@@ -166,14 +166,14 @@ const HeroSection = () => {
                 >
                     {BeamsComponent && <BeamsComponent {...beamProps} />}
                 </div> */}
-                <div
+                {/* <div
                     className='red-glow absolute bottom-[15%] left-1/2 -translate-x-1/2 w-full h-4/5 -z-50 rounded-t-full '
                 >
                 </div>
                 <div
                     className='black-gradient absolute -bottom-5 left-1/2 -translate-x-1/2 w-full h-1/5 -z-50 '
                 >
-                </div>
+                </div> */}
             </section>
         </main>
     )
