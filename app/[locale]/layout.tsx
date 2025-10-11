@@ -56,6 +56,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
+        <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="" />
         
